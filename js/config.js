@@ -2,7 +2,7 @@
 const CONFIG = {
   nama: "Lungaabroad.id",
   email: "lungaabroad@gmail.com",            // GANTI
-  whatsapp: "+6285842540779",                // GANTI: format 62812... tanpa + atau 0
+  whatsapp: "6285842540779",                // GANTI: format 62812... tanpa + atau 0
   pesanAwal: "Halo Lungaabroad.id, saya ingin konsultasi.",
   sosial: [                                 // GANTI username
     { nama: "Instagram", url: "https://www.instagram.com/lungaabroad.id?stkn=MXh3amd4aHhmM3Z0bQ%3D%3D&utm_source=qr" },
