@@ -1,180 +1,685 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0B2B5E">
-<link rel="icon" href="assets/img/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<title>Lungaabroad.id — Kursus Bahasa Prancis &amp; Persiapan ke Canada | Francophone Mobility Indonesia</title>
-<meta name="description" content="Kelas bahasa Prancis dan persiapan ujian ke Canada: jenjang A1–B2, TCF/TEF Canada, dokumen, dan bimbingan sampai keberangkatan. Pelopor Francophone Mobility Indonesia.">
-<meta property="og:title" content="Lungaabroad.id — Kelas Bahasa Prancis &amp; Persiapan Ujian ke Canada">
-<meta property="og:description" content="Bahasa Prancis adalah peluang karirmu ke Canada. Kami bimbing sampai gerbang keberangkatan.">
-<meta property="og:image" content="assets/img/og.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunga Abroad — Bahasa Prancis &amp; Persiapan ke Kanada</title>
+  <meta name="description" content="Belajar bahasa Prancis dan persiapan menuju peluang karier di Kanada bersama Lunga Abroad.">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-<a class="skip" href="#konten">Langsung ke konten</a>
-<header class="top"><div class="wrap bar">
- <a class="logo" href="index.html" aria-label="Lungaabroad.id, beranda"><img src="assets/img/logo-mark.png" alt="" width="40" height="42"><span>Lunga<i>abroad</i><small>.id</small></span></a>
- <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
- <nav id="nav" aria-label="Navigasi utama"><ul>
-  <li><a href="index.html#jalur">Jalur</a></li>
-  <li><a href="program.html">Program</a></li>
-  <li><a href="index.html#tips">Sharing &amp; Tips</a></li>
-  <li><a href="index.html#faq">FAQ</a></li>
-  <li><a class="btn sm" href="index.html#kontak">Konsultasi</a></li>
- </ul></nav></div></header>
-<main id="konten">
-<section class="hero" aria-labelledby="h1"><div class="wrap">
- <svg class="stamp" viewBox="0 0 160 160" aria-hidden="true"><defs><path id="cir" d="M80,80 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><circle cx="80" cy="80" r="76" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="80" r="40" fill="none" stroke="currentColor"/><text font-size="9" letter-spacing="2" font-weight="600" fill="currentColor"><textPath href="#cir">LUNGAABROAD.ID · FRANCOPHONE MOBILITY · INDONESIA ·</textPath></text><text x="80" y="92" text-anchor="middle" font-family="Fraunces,serif" font-style="italic" font-size="34" fill="currentColor">L</text></svg>
- <div class="hg">
-  <div>
-   <p class="lbl">Kelas bahasa dan persiapan ujian</p>
-   <h1 id="h1">Bahasa Prancis adalah peluang kariermu ke Canada. <em>Kami Bimbing Sampai Gerbang Keberangkatan.</em></h1>
-   <p class="lead">Lembaga edukasi bahasa Prancis dan persiapan karier ke Canada. Pelopor Francophone Mobility Indonesia: kelas bahasa, Persiapan dan simulasi ujian (TCF/TEF), dan bimbingan dokumen untuk bekerja hingga Permanent Resident di Canada.</p>
-   <p class="row"><a class="btn rouge" href="#kontak">Konsultasi awal</a><a class="btn line" href="#jalur">Lihat jalurnya</a></p>
-   <p class="note"><b>Lunga</b> dalam etimologis bahasa Jawa & Bali memiliki arti pergi.</p>
+<body id="top">
+<header class="header">
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="Lunga Abroad, beranda">
+        <img class="site-logo-mark" src="assets/img/logo-mark.png" alt="">
+        <span class="logo-type"><span class="logo-lunga">LUNGA</span><span class="logo-abroad">ABROAD</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#program">Program</a>
+        <a href="#proses">Proses</a>
+        <a href="#kegiatan">Kegiatan</a>
+        <a href="#tips">Sharing &amp; Tips</a>
+        <a href="#tentang">Tentang kami</a>
+      </nav>
+
+      <a class="button" href="#kontak">Konsultasi awal</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Navigasi ponsel" hidden>
+  <a href="#program">Program</a>
+  <a href="#proses">Proses</a>
+  <a href="#kegiatan">Kegiatan</a>
+  <a href="#tips">Sharing &amp; Tips</a>
+  <a href="#tentang">Tentang kami</a>
+  <a href="#tutor">Tutor</a>
+  <a href="#news-update">News Update</a>
+  <a href="#faq">FAQ</a>
+  <a href="#kontak">Konsultasi</a>
+</nav>
+</header>
+
+<main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Belajar bahasa · Rancang masa depan</p>
+
+          <h1>
+            Bahasa Prancis adalah peluang kariermu ke
+            <span>Kanada.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Kelas bahasa Prancis, persiapan ujian TCF/TEF Canada dan membimbingmu
+            dari langkah pertama sampai pintu keberangkatan.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#kontak">Daftar Sekarang <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#program">Lihat program</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-mark" aria-hidden="true">✓</span>
+            <span>Dari Indonesia ke Kanada.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="numbers" aria-label="Ringkasan Lunga Abroad">
+      <div class="container number-grid">
+        <div class="number-item">
+          <strong data-counter="number" data-target="10" data-suffix="+" aria-label="10 plus">10+</strong>
+          <span>Provinsi tujuan</span>
+        </div>
+        <div class="number-item">
+          <strong data-counter="levels" aria-label="Level A1 sampai B2">A1 – B2</strong>
+          <span>Jenjang bahasa Prancis</span>
+        </div>
+        <div class="number-item">
+          <strong data-counter="number" data-target="2" data-suffix=" program" aria-label="2 program">2 program</strong>
+          <span>Pathway Kanada</span>
+        </div>
+        <div class="number-item">
+          <strong data-counter="number" data-target="4" data-suffix=" Syarat" aria-label="4 tahap">4 Syarat</strong>
+          <span>Umum</section>
+<section class="section" id="program">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Pilihan program</p>
+      <h2>Dua jalur, <span>satu tujuan.</span></h2>
+      <p>
+        Pilih jalur persiapan yang sesuai dengan Impianmu.
+        Kami bimbing memahami langkah awalnya.
+      </p>
+    </div>
+
+    <div class="program-grid">
+      <article class="program-card">
+        <div class="program-icon" aria-hidden="true">01</div>
+        <p class="card-kicker">Jalur kerja</p>
+        <h3><a href="francophone-mobility.html">Francophone Mobility</a></h3>
+        <p>
+          Persiapan bahasa Prancis dan pendampingan untuk memahami proses
+          menuju peluang kerja di Kanada.
+        </p>
+        <a href="francophone-mobility.html">Pelajari Francophone Mobility <span aria-hidden="true">↗</span></a>
+      </article>
+
+      <article class="program-card program-card-featured">
+        <div class="program-icon" aria-hidden="true">02</div>
+        <p class="card-kicker">Jalur imigrasi</p>
+        <h3><a href="express-entry-french.html">Express Entry – Pathway PR</a></h3>
+        <p>
+          Persiapan bahasa dan ujian sebagai bagian dari rencana menuju
+          jalur Express Entry dan permanent residence.
+        </p>
+        <a href="express-entry-french.html">Pelajari jalur Express Entry <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
   </div>
-  <section class="pass rv" aria-label="Pilih kota tujuan di Canada">
-   <div class="pmain">
-    <div class="tabs" role="tablist" id="tabs" aria-label="Tujuan"></div>
-    <div class="rt" id="rt" aria-live="polite">CGK → <span id="kodetujuan">YUL</span></div>
-    <p class="fm">Francophone <em>Mobility</em></p>
-    <dl id="pd"><div><dt>Kota</dt><dd id="d-kota"></dd></div><div><dt>Provinsi</dt><dd id="d-neg"></dd></div><div><dt>Jalur umum</dt><dd id="d-jalur"></dd></div><div><dt>Ujian bahasa</dt><dd id="d-ujian"></dd></div><div class="full"><dt>Catatan</dt><dd id="d-cat"></dd></div></dl>
-   </div>
-   <div class="stub" aria-hidden="true"><b>LUNGAABROAD.ID</b><span class="bars"></span></div>
-  </section>
- </div>
-</div></section>
+</section>
 
-<div class="tick" aria-hidden="true"><div class="tk" id="tk"></div></div>
+<section class="section choice-section" id="pilihan-program">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Pilihan kelas</p>
+      <h2>Temukan program yang <span>sesuai dengan rencanamu.</span></h2>
+      <p>Mulai dari fondasi bahasa hingga persiapan ujian, pilih format belajar yang paling sesuai.</p>
+    </div>
 
-<section class="wrap" aria-label="Ringkasan"><div class="num">
- <div><b>10+</b><span>Provinsi di Canada</span></div>
- <div><b>A1→B2</b><span>Jenjang Bahasa Yang Dipetakan</span></div>
- <div><b>2</b><span>Program: Pathway Career &amp; Pathway Permanent Resident</span></div>
- <div><b>4</b><span>Tahapan Menuju Canada</span></div>
-</div></section>
+    <p class="choice-scroll-hint">Geser untuk melihat program lainnya</p>
+    <div class="choice-carousel">
+      <button class="choice-scroll-button choice-scroll-prev" type="button" data-choice-scroll="-1" aria-label="Geser program ke kiri">←</button>
+      <div class="choice-grid" id="choice-program-track" tabindex="0" aria-label="Daftar program belajar, geser ke samping untuk melihat semua pilihan">
+      <article class="choice-card">
+        <span class="choice-index">01</span>
+        <p class="choice-type">Fondasi bahasa</p>
+        <h3>Program Reguler</h3>
+        <p class="choice-desc">Kurikulum A1–A2 dengan tutor berpengalaman, materi digital, latihan empat keterampilan, dan rekaman kelas. Tersedia kelas pagi atau malam.</p>
+        <p class="choice-duration"><strong>3 bulan</strong><span>66 sesi weekday atau 12 sesi Sabtu</span></p>
+        <a href="program.html?program=reguler">Lihat detail program <span aria-hidden="true">↗</span></a>
+      </article>
 
-<section class="sec" id="tentang" aria-labelledby="j-tentang"><div class="wrap ab">
- <div class="rv"><p class="lbl">Tentang</p><h2 id="j-tentang">Dua fokus: bahasa Prancis dan <em>Canada.</em></h2></div>
- <div class="rv"><p class="big">Tentang Lunga Abroad
-Membuka Akses Karier Global Melalui Bahasa Prancis dan Persiapan yang Tepat</p>
- <p>LungaAbroad.id adalah platform edukasi dan bimbingan persiapan.</p>
- <p>Kami berfokus pada pembelajaran bahasa Prancis, informasi jalur kerja legal ke Canada melalui Francophone Mobility, serta persiapan dokumen dan karier untuk membantu kandidat melangkah lebih terarah.</p></div>
- <p class="big">Lunga Abroad — Prepare Today. Work Anywhere Tomorrow.</p>
-</div></section>
+      <article class="choice-card">
+        <span class="choice-index">02</span>
+        <p class="choice-type">Pengembangan level</p>
+        <h3>Program Extension</h3>
+        <p class="choice-desc">Kurikulum Refreshment A2 hingga Mastering B1 dengan latihan empat keterampilan, simulasi TCF/TEF, feedback tutor, dan dukungan persiapan karier.</p>
+        <p class="choice-duration"><strong>3 bulan</strong><span>66 sesi weekday atau 12 sesi Sabtu</span></p>
+        <a href="program.html?program=extension">Lihat detail program <span aria-hidden="true">↗</span></a>
+      </article>
 
-<section class="sec" id="jalur" style="padding-top:0" aria-labelledby="j-jalur"><div class="wrap">
- <p class="lbl">Jalur</p><h2 id="j-jalur">2 Program <em>Lungaabroad.</em></h2>
- <div class="jl">
-  <details class="j" name="jalur" open><summary><span class="n">01</span><span class="t">Francophone Mobility</span></summary><div class="jb"><div><span class="jt">Pathway Career</span><p>Jalur kerja ke Canada di luar Québec bagi kandidat berbahasa Prancis yang memiliki tawaran kerja sesuai ketentuan program. Fokus pada kesiapan karier dan dokumen.</p></div><ul><li>Kelas bahasa Prancis A1–B2</li><li>Persiapan TCF / TEF Canada</li><li>Job offer &amp; dokumen</li></ul></div></details>
-  <details class="j" name="jalur"><summary><span class="n">02</span><span class="t">Express Entry – Pathway PR</span></summary><div class="jb"><div><span class="jt">Pathway PR</span><p>Jalur menetap permanen melalui Express Entry. Kemampuan bahasa Prancis memberi nilai tambah dalam profil kandidat dan strategi menuju PR.</p></div><ul><li>Pemetaan profil Express Entry</li><li>Strategi bahasa &amp; skor</li><li>Pendampingan menuju PR</li></ul></div></details>
- </div>
-</div></section>
+      <article class="choice-card choice-card-featured">
+        <span class="choice-index">03</span>
+        <p class="choice-type">Fokus ujian</p>
+        <h3>Program Preparation</h3>
+        <p class="choice-desc">Private Preparation untuk peserta minimal B1: latihan TCF/TEF, simulasi wawancara kerja, serta bimbingan CV dan karier.</p>
+        <p class="choice-duration"><strong>1 bulan</strong><span>26 sesi · </span></p>
+        <a href="program.html?program=preparation">Lihat detail program <span aria-hidden="true">↗</span></a>
+      </article>
 
-<section class="sec" style="padding-top:0" aria-labelledby="j-tahap"><div class="wrap">
- <p class="lbl">Tahapan</p><h2 id="j-tahap">4 tahapan menuju <em>Canada.</em></h2>
- <ol class="steps" id="steps">
-  <li><b>Tahap 1</b><h3>Konsultasi &amp; pemetaan</h3><p>Tujuan, latar belakang, dan level bahasa awal dipetakan.</p></li>
-  <li><b>Tahap 2</b><h3>Belajar bertahap</h3><p>Belajar bertahap dari A1 menuju B2 sesuai target ujian (TCF/TEF Canada Score Listening and Speaking NCLC 5).</p></li>
-  <li><b>Tahap 3</b><h3>Ujian</h3><p>Latihan dan pendaftaran TCF Canada, TEF Canada.</p></li>
-  <li><b>Tahap 4</b><h3>Job Offer dan Keberangkatan</h3><p>CV format Canada, cover letter, simulasi wawancara, tawaran kerja, checklist izin, akomodasi, dan bekal bulan pertama.</p></li>
- </ol>
-</div></section>
+      <article class="choice-card">
+        <span class="choice-index">04</span>
+        <p class="choice-type">Kelas privat</p>
+        <h3>Private 1 on 1</h3>
+        <p class="choice-desc">Kelas 1-on-1 A1–A2 atau B1 Mastering dengan tutor, materi terstruktur, feedback, dan waktu kelas yang fleksibel.</p>
+        <p class="choice-duration"><strong>2 bulan</strong><span>52 sesi · 2 jam per sesi</span></p>
+        <a href="program.html?program=private">Lihat detail program <span aria-hidden="true">↗</span></a>
+      </article>
 
-<section class="sec oranye" aria-labelledby="j-beda"><div class="wrap">
- <p class="lbl">Kenapa kami</p><h2 id="j-beda">Belajar sendiri bisa. <em>Bersama Lunga</em> lebih terarah.</h2>
- <div class="scroll"><table><caption>Perbandingan persiapan mandiri dan bersama Lungaabroad.id</caption>
- <thead><tr><th scope="col">Aspek</th><th scope="col">Otodidak</th><th scope="col">Bersama Lungaabroad.id</th></tr></thead>
- <tbody>
-  <tr><th scope="row">Bahasa Prancis</th><td class="x">Aplikasi dan video, tanpa umpan balik</td><td class="y">Kelas terarah dengan target ujian TEF/TCF Canada</td></tr>
-  <tr><th scope="row">Dokumen</th><td class="x">Menebak format yang diminta</td><td class="y">Pendampingan CV dan cover letter format Canada</td></tr>
-  <tr><th scope="row">Wawancara</th><td class="x">Latihan sendirian</td><td class="y">Simulasi dengan masukan</td></tr>
-  <tr><th scope="row">Informasi terbaru</th><td class="x">Tercecer, sebagian usang</td><td class="y">Dirangkum dalam Sharing &amp; Tips</td></tr>
- </tbody></table></div>
-</div></section>
-
-<section class="sec" id="program" aria-labelledby="j-prog"><div class="wrap">
- <p class="lbl">Program</p><h2 id="j-prog">Tiga program, <em>satu tujuan.</em></h2>
- <div class="pg">
-  <article class="pc f"><span class="tg">Reguler</span><h3>Program Reguler</h3><p>A1 – A2. Fondasi bahasa Prancis untuk pemula: latihan bicara, menyimak, membaca, dan menulis dari nol.</p><a href="program.html#level">Lihat jenjang A1–A2 →</a></article>
-  <article class="pc"><span class="tg">Extension</span><h3>Program Extension</h3><p>B1 – B2. Perluas kemampuan bahasa untuk kuliah, kerja, dan percakapan sehari-hari yang lebih mandiri.</p><a href="program.html#level">Lihat jenjang B1–B2 →</a></article>
-  <article class="pc"><span class="tg">Preparation</span><h3>Program Preparation</h3><p>Min. B1 – TCF/TEF. Latihan soal dan simulasi sesuai ujian yang dituju.</p><a href="program.html#ujian">Bandingkan ujian →</a></article>
- </div>
-</div></section>
-
-<section class="sec" id="tips" style="padding-top:0" aria-labelledby="j-tips"><div class="wrap">
- <p class="lbl">Sharing &amp; Tips</p><h2 id="j-tips">Dibagikan <em>terbuka.</em></h2>
- <div class="chips" role="group" aria-label="Filter topik">
-  <button class="chip" data-f="semua" aria-pressed="true">Semua</button><button class="chip" data-f="bahasa" aria-pressed="false">Bahasa</button><button class="chip" data-f="jalur" aria-pressed="false">Jalur</button><button class="chip" data-f="dokumen" aria-pressed="false">Dokumen</button><button class="chip" data-f="hidup" aria-pressed="false">Hidup di sana</button>
- </div>
- <ul class="tips" id="tipslist">
-  <li data-c="bahasa"><small>Bahasa</small><a href="#">TEF Canada atau TCF Canada: memilih tes untuk rencana ke Canada</a><span></span></li>
-  <li data-c="bahasa"><small>Bahasa</small><a href="#">Berapa lama belajar sampai level menengah (B1)? Perkiraan realistis</a><span></span></li>
-  <li data-c="jalur"><small>Jalur</small><a href="#">Francophone Mobility dalam bahasa sederhana: apa itu dan siapa yang cocok</a><span></span></li>
-  <li data-c="dokumen"><small>Dokumen</small><a href="#">CV format Canada vs CV Indonesia: perbedaan yang sering terlewat</a><span></span></li>
-  <li data-c="dokumen"><small>Dokumen</small><a href="#">Menulis cover letter yang tidak terdengar generik</a><span></span></li>
-  <li data-c="hidup"><small>Hidup di sana</small><a href="#">Biaya bulan pertama di Canada: pos yang sering terlupa</a><span></span></li>
-  <li data-c="hidup"><small>Hidup di sana</small><a href="#">Musim dingin pertama: persiapan sebelum mendarat</a><span></span></li>
- </ul>
-</div></section>
-
-<section class="sec" style="padding-top:0" aria-labelledby="j-alumni"><div class="wrap">
- <p class="lbl">Kegiatan</p><h2 id="j-alumni">Momen dari <em>webinar kami.</em></h2>
- <figure class="wsl" id="wsl" aria-roledescription="carousel" aria-label="Foto webinar Francophone Mobility Canada">
-  <div class="wst">
-   <div class="ws on" role="group" aria-roledescription="slide" aria-label="1 dari 4" data-sub="Peserta dan Tim Lungaabroad"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.31.jpeg" alt="Tangkapan layar Zoom webinar Francophone Mobility Canada dengan peserta dan tim Lungaabroad" loading="lazy"></div>
-   <div class="ws" role="group" aria-roledescription="slide" aria-label="2 dari 4" data-sub="Pemateri Mr Vincent (Native Speaker French)"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.32.jpeg" alt="Pemateri Webinar Francophone Mobility Mr Vincent (Native Speaker French)" loading="lazy"></div>
-   <div class="ws" role="group" aria-roledescription="slide" aria-label="3 dari 4" data-sub="Pemateri Amanda Tri Budiarto"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.32 (1).jpeg" alt="Pemateri Webinar Francophone Mobility Amanda Tri Budiarto" loading="lazy"></div>
-   <div class="ws" role="group" aria-roledescription="slide" aria-label="4 dari 4" data-sub="Pemateri Mr Martin (Tutor France)"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.31 (1).jpeg" alt="Pemateri Webinar Francophone Mobility Mr Martin (Tutor France)
-" loading="lazy"></div>
+      <article class="choice-card">
+        <span class="choice-index">05</span>
+        <p class="choice-type">Kelas grup kecil · 3-4 orang</p>
+        <h3>Private Group</h3>
+        <p class="choice-desc">Belajar A1–A2 atau B1 Mastering dalam grup kecil dengan kurikulum terstruktur, tutor berpengalaman, dan jam kelas fleksibel.</p>
+        <p class="choice-duration"><strong>2 bulan</strong><span>52 sesi ·  3-4 peserta</span></p>
+        <a href="program.html?program=private-group">Lihat detail program <span aria-hidden="true">↗</span></a>
+      </article>
+      </div>
+      <button class="choice-scroll-button choice-scroll-next" type="button" data-choice-scroll="1" aria-label="Geser program ke kanan">→</button>
+    </div>
   </div>
-  <figcaption class="wbar">
-   <p class="wcap"><b>Webinar Francophone Mobility Canada</b><span id="wsub">Sesi pemaparan</span></p>
-   <div class="wctl"><span class="wnum" id="wnum" aria-hidden="true">01 / 04</span><button type="button" id="wprev" aria-label="Foto sebelumnya">←</button><button type="button" id="wnext" aria-label="Foto berikutnya">→</button></div>
-  </figcaption>
-  <ul class="wth"><li><button type="button" class="wt" aria-label="Lihat foto 1" aria-current="true"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.31.jpeg" alt=""></button></li><li><button type="button" class="wt" aria-label="Lihat foto 2"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.32.jpeg" alt=""></button></li><li><button type="button" class="wt" aria-label="Lihat foto 3"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.32 (1).jpeg" alt=""></button></li><li><button type="button" class="wt" aria-label="Lihat foto 4"><img src="assets/img/WhatsApp Image 2026-10-13 at 08.24.31 (1).jpeg" alt=""></button></li></ul>
- </figure>
-</div></section>
+</section>
+<section class="section process-section" id="proses">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Proses bimbingan</p>
+      <h2>Empat tahapan menuju <span>Kanada.</span></h2>
+      <p>
+        Kamu tidak harus mengetahui semua jawabannya dari awal.
+        Kita susun langkahnya bersama, satu tahap demi satu tahap.
+      </p>
+    </div>
 
-<section class="sec" id="faq" style="padding-top:0" aria-labelledby="j-faq"><div class="wrap fq">
- <div><p class="lbl">FAQ</p><h2 id="j-faq">Pertanyaan <em>umum.</em></h2><label class="sr" for="cari" style="position:absolute;left:-999px">Cari pertanyaan</label><input id="cari" type="search" placeholder="Cari pertanyaan…" autocomplete="off"></div>
- <div id="faqlist">
-  <details class="q"><summary>Apa itu Francophone Mobility?</summary><p>Program izin kerja Canada yang memungkinkan pekerja berbahasa Prancis bekerja di luar Québec dengan tawaran kerja yang memenuhi persyaratan program.</p></details>
-  <details class="q"><summary>Apakah harus bisa bahasa Prancis dulu?</summary><p>Tidak harus mahir sejak awal. Kamu bisa mulai belajar dari nol, tetapi wajib memenuhi persyaratan kemampuan bahasa Prancis saat mengajukan program.</p></details>
-  <details class="q"><summary>Apakah semua jalur ke Canada butuh bahasa Prancis?</summary><p>Tidak. Persyaratan bahasa bergantung pada jalur yang dipilih. Bahasa Prancis menjadi persyaratan penting untuk Francophone Mobility, sedangkan jalur lain dapat menggunakan bahasa Inggris atau memiliki ketentuan berbeda.</p></details>
-  <details class="q"><summary>Apa bedanya Québec dan provinsi lain?</summary><p>Québec punya sistem imigrasi sendiri dan bahasa Prancis sebagai bahasa utama. Provinsi lain memakai jalur federal atau provinsial masing-masing, dengan komunitas francophone yang lebih kecil.</p></details>
-  <details class="q"><summary>Berapa lama sampai siap berangkat?</summary><p>Tergantung level awal, jam belajar per minggu, dan jalur. Kalkulator di halaman Program memberi gambaran kasar.</p></details>
-  <details class="q"><summary>Apakah pasti diterima atau dapat kerja?</summary><p>Tidak ada jaminan. Keputusan akhir ada pada institusi, perusahaan, dan IRCC. Kami membantu meningkatkan kesiapanmu.</p></details>
-  <details class="q"><summary>Apakah konsultasi awal berbayar?</summary><p>Konsultasi gratis dengan tim Lungaaboard.id.</p></details>
-  <details class="q"><summary>Online atau offline?</summary><p>Untuk saat ini kelas tersedia secara Online, menyesuaikan program dan jadwal yang tersedia.</p></details>
-  <details class="q"><summary>Bagaimana dengan visa dan izin kerja?</summary><p>Lunga Abroad membantu memberikan edukasi, checklist dokumen, dan panduan proses berdasarkan informasi resmi. Pengajuan serta persetujuan visa dan izin kerja mengikuti ketentuan dan keputusan otoritas imigrasi Canada (IRCC).</p></details>
-  <p id="nol">Tidak ada yang cocok. Tanyakan langsung lewat WhatsApp.</p>
- </div>
-</div></section>
+    <ol class="process-list">
+      <li class="process-step">
+        <span class="step-number">01</span>
+        <div>
+          <h3>Konsultasi dan pemetaan</h3>
+          <p>
+            Ceritakan tujuan, pengalaman, dan rencana yang kamu miliki.
+            Dari sana kita petakan kemungkinan langkah awal.
+          </p>
+        </div>
+      </li>
 
-<section class="sec kt" id="kontak" aria-labelledby="j-kontak"><div class="wrap kg">
- <div><p class="lbl">Kontak</p><h2 id="j-kontak">Ceritakan rencanamu. <em>Kami petakan.</em></h2><ul class="sl" data-sos style="margin-top:28px"></ul></div>
- <form class="form" id="form">
-  <label>Nama<input id="f-nama" required autocomplete="name" placeholder="Nama lengkap"></label>
-  <label>Provinsi tujuan<select id="f-tuj"><option>Belum tahu</option><option>Québec</option><option>Ontario</option><option>New Brunswick</option><option>Manitoba</option><option>British Columbia</option><option>Alberta</option><option>Saskatchewan</option><option>Nova Scotia</option><option>Newfoundland &amp; Labrador</option><option>Prince Edward Island</option><option>Wilayah lain</option></select></label>
-  <label>Program<select id="f-jal"><option>Belum tahu</option><option>Francophone Mobility (Pathway Career)</option><option>Express Entry (Pathway PR)</option></select></label>
-  <label>Level bahasa Prancis<select id="f-lv"><option>Belum pernah belajar</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option></select></label>
-  <button class="btn" type="submit">Kirim lewat WhatsApp</button>
- </form>
-</div></section>
+      <li class="process-step">
+        <span class="step-number">02</span>
+        <div>
+          <h3>Belajar bahasa Prancis</h3>
+          <p>
+            Mulai dari level yang sesuai dan belajar bertahap menuju target
+            bahasa yang dibutuhkan untuk rencanamu.
+          </p>
+        </div>
+      </li>
+
+      <li class="process-step">
+        <span class="step-number">03</span>
+        <div>
+          <h3>Persiapan ujian</h3>
+          <p>
+            Kenali format TCF Canada atau TEF Canada dan persiapkan kemampuan
+            bahasa yang akan diujikan.
+          </p>
+        </div>
+      </li>
+
+      <li class="process-step">
+        <span class="step-number">04</span>
+        <div>
+          <h3>Persiapan kerja dan keberangkatan</h3>
+          <p>
+            Susun persiapan lanjutan bersama tim, sesuai jalur dan kondisi
+            masing-masing peserta.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+    <!-- Bagian program, proses, dan kontak kita tambahkan pada langkah berikutnya. -->
+     <section class="section" id="tentang">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <p class="eyebrow">Tentang Lunga Abroad</p>
+      <h2>
+        Persiapan yang lebih terarah untuk
+        <span>masa depanmu.</span>
+      </h2>
+
+      <p>
+        Lungaabroad adalah platform edukasi dan bimbingan persiapan bahasa
+        Prancis serta bimbingan karir menuju Kanada. Kami membantu peserta memahami
+        pilihan program, membangun kemampuan bahasa, dan menyiapkan langkah
+        berikutnya dengan lebih terstruktur.
+      </p>
+
+      <a class="text-link" href="#kontak">
+        Kenali langkah pertamamu <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="about-panel">
+      <div class="about-panel-glow" aria-hidden="true"></div>
+      <p class="panel-label">Fokus pendampingan</p>
+
+      <div class="focus-item">
+        <span class="focus-number">01</span>
+        <div>
+          <h3>Bahasa Prancis</h3>
+          <p>Pembelajaran bertahap dari A1 sampai B2.</p>
+        </div>
+      </div>
+
+      <div class="focus-item">
+        <span class="focus-number">02</span>
+        <div>
+          <h3>Persiapan ujian</h3>
+          <p>Pengenalan dan latihan untuk TCF Canada atau TEF Canada.</p>
+        </div>
+      </div>
+
+      <div class="focus-item">
+        <span class="focus-number">03</span>
+        <div>
+          <h3>Rencana menuju Kanada</h3>
+          <p>Pemetaan langkah sesuai tujuan dan kondisi peserta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tutor-section" id="tutor">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Tim pengajar</p>
+      <h2>Belajar bersama <span>tutor Lunga.</span></h2>
+      <p>
+        Kenali pengajar yang akan mendampingi proses belajarmu.
+        Detail profil dan pengalaman dapat disesuaikan dengan informasi terbaru.
+      </p>
+    </div>
+
+    <div class="tutor-grid">
+      <article class="tutor-card">
+        <img class="tutor-photo" src="assets/img/martin.jpg" alt="Foto tutor M. Martin" loading="lazy">
+        <p class="tutor-role">Tutor bahasa Prancis</p>
+        <h3>M. Martin</h3>
+        <p>
+          Mendampingi peserta membangun fondasi bahasa dan kepercayaan diri
+          untuk berkomunikasi.
+        </p>
+      </article>
+
+      <article class="tutor-card">
+        <img class="tutor-photo" src="assets/img/vincent.jpg" alt="Foto tutor M. Vincent" loading="lazy">
+        <p class="tutor-role">Tutor bahasa Prancis</p>
+        <h3>M. Vincent</h3>
+        <p>
+          Membantu peserta berlatih bahasa Prancis secara bertahap sesuai
+          tingkat dan tujuan belajar.
+        </p>
+      </article>
+
+      <article class="tutor-card">
+        <img class="tutor-photo" src="assets/img/hajar.jpg" alt="Foto tutor Mme. Hajar" loading="lazy">
+        <p class="tutor-role">Tutor bahasa Prancis</p>
+        <h3>Mme. Hajar</h3>
+        <p>
+          Mendampingi latihan bahasa dan persiapan peserta menuju target
+          pembelajaran berikutnya.
+        </p>
+      </article>
+
+      <article class="tutor-card">
+        <img class="tutor-photo" src="assets/img/batubara.jpg" alt="Foto tutor Mlle. Catherine" loading="lazy">
+        <p class="tutor-role">Tutor bahasa Prancis</p>
+        <h3>Mlle. Catherine</h3>
+        <p>
+          Membimbing peserta mengembangkan keterampilan bahasa untuk
+          kebutuhan belajar dan ujian.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+  <section class="section gallery-section" id="kegiatan">
+  <div class="container">
+    <div class="section-heading gallery-heading">
+      <p class="eyebrow">Kegiatan Lunga Abroad</p>
+      <h2>Momen dari <span>webinar kami.</span></h2>
+      <p>Beberapa cuplikan kegiatan berbagi informasi dan belajar bersama komunitas.</p>
+    </div>
+
+    <div class="gallery" aria-label="Galeri webinar Francophone Mobility Canada">
+      <div class="gallery-image-wrap">
+        <button class="gallery-arrow gallery-prev" type="button" aria-label="Foto sebelumnya">‹</button>
+        <img class="gallery-image" src="assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.31.jpeg" alt="Tangkapan layar Zoom webinar Francophone Mobility Canada dengan peserta dan tim Lungaabroad" loading="lazy">
+        <button class="gallery-arrow gallery-next" type="button" aria-label="Foto berikutnya">›</button>
+      </div>
+      <div class="gallery-caption-row">
+        <div>
+          <p class="gallery-counter" id="gallery-counter">01 / 04</p>
+          <h3 id="gallery-caption">Peserta dan Tim Lungaabroad</h3>
+        </div>
+        <p class="gallery-name">Webinar Francophone Mobility Canada</p>
+      </div>
+      <div class="gallery-thumbnails" role="group" aria-label="Pilih foto webinar">
+        <button class="gallery-thumb is-active" type="button" data-gallery-index="0" aria-label="Lihat foto 1" aria-pressed="true">
+          <img src="assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.31.jpeg" alt="" loading="lazy">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-index="1" aria-label="Lihat foto 2" aria-pressed="false">
+          <img src="assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.32.jpeg" alt="" loading="lazy">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-index="2" aria-label="Lihat foto 3" aria-pressed="false">
+          <img src="assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.32%20(1).jpeg" alt="" loading="lazy">
+        </button>
+        <button class="gallery-thumb" type="button" data-gallery-index="3" aria-label="Lihat foto 4" aria-pressed="false">
+          <img src="assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.31%20(1).jpeg" alt="" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section tips-section" id="tips">
+  <div class="container">
+    <div class="section-heading tips-heading">
+      <div>
+        <p class="eyebrow">Sharing &amp; Tips</p>
+        <h2>Mulai dengan <span>informasi yang jelas.</span></h2>
+      </div>
+      <p>Panduan singkat untuk membantu memahami bahasa Prancis dan persiapan menuju Kanada.</p>
+    </div>
+
+    <div class="tip-filters" role="group" aria-label="Filter artikel tips">
+      <button class="tip-filter" type="button" data-tip-filter="semua" aria-pressed="true">Semua</button>
+      <button class="tip-filter" type="button" data-tip-filter="bahasa" aria-pressed="false">Bahasa</button>
+      <button class="tip-filter" type="button" data-tip-filter="ujian" aria-pressed="false">Persiapan ujian</button>
+      <button class="tip-filter" type="button" data-tip-filter="rencana" aria-pressed="false">Rencana ke Kanada</button>
+    </div>
+
+    <div class="tip-list" id="tip-grid">
+      <article class="tip-row" data-tip-category="bahasa">
+        <span class="tip-category">Bahasa</span>
+        <h3>Mulai belajar bahasa Prancis dari level mana?</h3>
+        <p>Kenali kemampuan awalmu agar rencana belajar terasa terukur dan tidak terburu-buru.</p>
+        <a href="#kontak">Diskusikan level awal <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="tip-row" data-tip-category="ujian">
+        <span class="tip-category">Persiapan ujian</span>
+        <h3>Kenali tujuan sebelum memilih ujian</h3>
+        <p>TCF Canada dan TEF Canada memiliki format masing-masing. Pastikan pilihanmu sesuai kebutuhan.</p>
+        <a href="#faq">Baca pertanyaan umum <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="tip-row" data-tip-category="rencana">
+        <span class="tip-category">Rencana ke Kanada</span>
+        <h3>Susun langkah secara bertahap</h3>
+        <p>Mulai dari tujuan, kemampuan bahasa, dan informasi resmi yang relevan dengan rencana pribadi.</p>
+        <a href="#proses">Lihat tahapan bimbingan <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>    <p class="tip-note">Informasi program dan persyaratan dapat berubah. Periksa selalu ketentuan terbaru dari sumber resmi.</p>
+  </div>
+</section>
+<section class="section news-section" id="news-update">
+  <div class="container">
+    <div class="section-heading news-heading">
+      <div>
+        <p class="eyebrow">News Update</p>
+        <h2>Info terbaru seputar <span>Kanada.</span></h2>
+      </div>
+      <p>Ringkasan berita dan hasil draw dari sumber resmi IRCC. Buka sumber untuk membaca detail lengkap.</p>
+    </div>
+
+    <div class="news-list">
+      <article class="news-row">
+        <a class="news-image-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/10/canada-refocusing-express-entry-on-top-talent-that-drives-economic-growth.html" target="_blank" rel="noopener noreferrer" aria-label="Buka berita Express Entry di Canada.ca">
+          <img class="news-thumb" src="assets/img/news 1.jpg" alt="Ilustrasi resmi IRCC tentang prioritas Express Entry" loading="lazy">
+        </a>
+        <div class="news-content">
+          <div class="news-meta"><span>Express Entry</span><time datetime="2026-10-16">16 Oktober 2026</time></div>
+          <h3>Express Entry menyesuaikan poin untuk kebutuhan tenaga kerja</h3>
+          <p>IRCC mengumumkan poin untuk pengalaman kerja Kanada yang memenuhi syarat atau tawaran kerja tertentu di bidang upah tinggi. Perubahan berlaku mulai 3 November 2026.</p>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/10/canada-refocusing-express-entry-on-top-talent-that-drives-economic-growth.html" target="_blank" rel="noopener noreferrer">Baca rilis IRCC <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="news-row">
+        <a class="news-image-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/09/canada-is-supporting-new-projects-to-promote-francophone-immigration-and-strengthen-francophone-minority-communities.html" target="_blank" rel="noopener noreferrer" aria-label="Buka berita imigrasi Francophone di Canada.ca">
+          <img class="news-thumb" src="assets/img/news 2.jpg" alt="Ilustrasi resmi IRCC tentang inisiatif imigrasi Francophone" loading="lazy">
+        </a>
+        <div class="news-content">
+          <div class="news-meta"><span>Francophone</span><time datetime="2026-09-29">29 September 2026</time></div>
+          <h3>Dukungan proyek imigrasi Francophone di beberapa wilayah</h3>
+          <p>Pemerintah Kanada mengumumkan dukungan bagi proyek yang menghubungkan talenta Francophone dan bilingual dengan kebutuhan komunitas serta tenaga kerja.</p>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/09/canada-is-supporting-new-projects-to-promote-francophone-immigration-and-strengthen-francophone-minority-communities.html" target="_blank" rel="noopener noreferrer">Baca rilis IRCC <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="news-row">
+        <a class="news-image-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/10/new-penalties-for-fraudulent-and-unauthorized-immigration-and-citizenship-representatives.html" target="_blank" rel="noopener noreferrer" aria-label="Buka berita perlindungan pemohon di Canada.ca">
+          <img class="news-thumb" src="assets/img/IRCC sanksi.jpg" alt="Materi resmi Canada.ca tentang sanksi bagi perwakilan imigrasi yang melanggar aturan" loading="lazy">
+        </a>
+        <div class="news-content">
+          <div class="news-meta"><span>Perlindungan pemohon</span><time datetime="2026-10-28">28 Oktober 2026</time></div>
+          <h3>IRCC mengumumkan sanksi untuk perwakilan tidak resmi</h3>
+          <p>Aturan baru menetapkan sanksi bagi pihak yang melanggar ketentuan saat memberi nasihat imigrasi berbayar. Periksa status perwakilan sebelum membayar layanan.</p>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/10/new-penalties-for-fraudulent-and-unauthorized-immigration-and-citizenship-representatives.html" target="_blank" rel="noopener noreferrer">Baca rilis IRCC <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="news-row news-draw">
+        <a class="news-image-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds/invitations.html?q=452" target="_blank" rel="noopener noreferrer" aria-label="Buka detail draw Express Entry nomor 452 di Canada.ca">
+          <img class="news-thumb" src="assets/img/express 452.jpg" alt="Ilustrasi resmi IRCC terkait imigrasi Francophone" loading="lazy">
+        </a>
+        <div class="news-content">
+          <div class="news-meta"><span>French-language draw</span><time datetime="2026-10-27">27 Oktober 2026</time></div>
+          <h3>Draw French-language proficiency #452</h3>
+          <p>IRCC mengeluarkan 5.000 undangan. CRS terendah yang diundang: 407. Hasil draw adalah catatan historis, bukan jaminan hasil berikutnya.</p>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds/invitations.html?q=452" target="_blank" rel="noopener noreferrer">Lihat instruksi resmi <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="news-row news-draw">
+        <a class="news-image-link" href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds/invitations.html?q=450" target="_blank" rel="noopener noreferrer" aria-label="Buka detail draw Express Entry nomor 450 di Canada.ca">
+          <img class="news-thumb" src="assets/img/express 450.jpg" alt="Ilustrasi resmi IRCC terkait imigrasi Francophone" loading="lazy">
+        </a>
+        <div class="news-content">
+          <div class="news-meta"><span>French-language draw</span><time datetime="2026-10-16">16 Oktober 2026</time></div>
+          <h3>Draw French-language proficiency #450</h3>
+          <p>IRCC mengeluarkan 5.000 undangan. CRS terendah yang diundang: 435. Kategori ini memiliki persyaratan tersendiri; lihat instruksi draw untuk rinciannya.</p>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds/invitations.html?q=450" target="_blank" rel="noopener noreferrer">Lihat instruksi resmi <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+    <p class="news-disclaimer">Ringkasan untuk informasi umum, bukan nasihat imigrasi atau jaminan kelayakan. Persyaratan kategori French-language proficiency termasuk hasil minimal NCLC 7 pada tiap kemampuan bahasa; selalu verifikasi ketentuan resmi terbaru.</p>
+  </div>
+</section>
+<section class="section faq-section" id="faq">
+  <div class="container faq-layout">
+    <div class="section-heading">
+      <p class="eyebrow">Punya pertanyaan?</p>
+      <h2>Yang sering ditanyakan <span>calon peserta.</span></h2>
+      <p>
+        Belum menemukan jawaban yang kamu cari? Hubungi kami untuk
+        membicarakan rencana belajarmu.
+      </p>
+      <a class="button" href="#kontak">Tanya langsung</a>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Apakah saya harus bisa bahasa Prancis sebelum mendaftar?</summary>
+        <p>
+          Tidak selalu. Pilih program dan level awal berdasarkan kemampuanmu.
+          Konsultasi awal dapat membantu memetakan langkah belajar yang sesuai.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Apa perbedaan TCF Canada dan TEF Canada?</summary>
+        <p>
+          Keduanya merupakan ujian bahasa Prancis dengan format dan penyelenggara
+          yang berbeda. Tanyakan kepada tim kami untuk membahas persiapan ujian
+          sesuai rencanamu, lalu cek ketentuan terbaru dari sumber resmi.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Apakah Lunga Abroad menjamin pekerjaan atau visa?</summary>
+        <p>
+          Tidak. Hasil kerja, izin, dan keputusan imigrasi bergantung pada
+          persyaratan serta keputusan pihak terkait. Bimbingan berfokus pada
+          pembelajaran dan persiapan sesuai layanan yang disepakati.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Bagaimana cara mengetahui program yang cocok?</summary>
+        <p>
+          Mulailah dengan konsultasi. Ceritakan kemampuan bahasa, tujuan, dan
+          rencanamu agar tim dapat membantu menjelaskan pilihan program.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Berapa batasan umur mengikuti program Francophone mobility</summary>
+        <p>
+         Tidak ada batasan umur yang tercantum secara resmi di website IRCC terkait umur jalur Francophone mobility.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Apakah bisa membawa keluarga dengan program Francophone Mobility?</summary>
+        <p>
+          Tentu!, program Francophone Mobility memiliki peluang untuk membawa keluarga, pasangan dan anak.
+        </p>
+      </details>
+       <details class="faq-item">
+        <summary>Apakah saya harus membayar untuk job offer untuk Lunga?</summary>
+        <p>
+          Tidak ada biaya yang harus di bayarkan untuk proses imigrasi dan terkait job terhadap Lunga abroad.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-section" id="kontak">
+  <div class="container contact-layout">
+    <div>
+      <p class="eyebrow">Mulai percakapan</p>
+      <h2>Ceritakan rencanamu. <span>Kita petakan bersama.</span></h2>
+      <p class="contact-copy">
+        Isi formulir singkat ini. Tombolnya akan membuka WhatsApp dengan
+        ringkasan pesan yang bisa kamu periksa sebelum dikirim.
+      </p>
+
+      <p class="contact-note">
+        Lungaabroad.id adalah platform edukasi dan bimbingan persiapan bahasa
+        Prancis dan Kanada.
+      </p>
+    </div>
+
+    <form class="contact-form" id="contact-form">
+      <label for="nama">Nama</label>
+      <input id="nama" name="nama" type="text" placeholder="Nama kamu" required>
+
+      <label for="tujuan">Program yang ingin ditanyakan</label>
+      <select id="tujuan" name="tujuan" required>
+        <option value="">Pilih program</option>
+        <option>Francophone Mobility</option>
+        <option>Express Entry – Pathway PR</option>
+        <option>Kelas bahasa Prancis</option>
+        <option>Persiapan TCF / TEF</option>
+        <option>Belum yakin</option>
+      </select>
+
+      <label for="pesan">Ceritakan rencanamu</label>
+      <textarea
+        id="pesan"
+        name="pesan"
+        rows="4"
+        placeholder="Contoh: Saya ingin mulai belajar bahasa Prancis dari dasar."
+      ></textarea>
+
+      <button class="button contact-submit" type="submit">
+        Lanjut ke WhatsApp <span aria-hidden="true">↗</span>
+      </button>
+      <p class="form-help">WhatsApp akan terbuka agar kamu bisa meninjau pesan.</p>
+    </form>
+  </div>
+</section>
+
 </main>
-<footer class="ft"><div class="wrap">
- <div class="fg">
-  <div><a class="logo" href="index.html" aria-label="Lungaabroad.id"><img src="assets/img/logo-mark.png" alt="" width="40" height="42"><span>Lunga<i>abroad</i><small>.id</small></span></a><p>Kelas bahasa dan persiapan ujian.<br>Pelopor Francophone Mobility Indonesia.<br>Bahasa Prancis &amp; persiapan ke Canada.</p><p class="legal"><b>PT LUNGA CAKRAWALA GLOBALINDO</b> — Bahasa Prancis &amp; persiapan Canada.</p></div>
-  <div><h3>Jelajah</h3><ul><li><a href="index.html#jalur">Jalur</a></li><li><a href="program.html">Program</a></li><li><a href="index.html#tips">Sharing &amp; Tips</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
-  <div><h3>Hubungi</h3><ul><li><a data-mail href="#">email</a></li><li><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
-  <div><h3>Ikuti</h3><ul data-sos></ul></div>
- </div>
- <p class="cp">© <span data-year></span> Lungaabroad.id. Informasi visa, imigrasi, dan ujian dapat berubah; selalu verifikasi di situs resmi IRCC (Immigration, Refugees and Citizenship Canada), kedutaan, dan penyelenggara ujian.</p>
-</div></footer>
-<a class="wa" data-wa href="#" target="_blank" rel="noopener">Chat WhatsApp</a>
-<script src="js/config.js"></script><script src="js/main.js"></script>
-</body></html>
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="footer-logo" href="#top" aria-label="Lunga Abroad, kembali ke atas">
+          <img src="assets/img/logo-mark.png" alt="" width="42" height="42">
+          <span>Lunga<span>abroad</span><small>.id</small></span>
+        </a>
+        <p>Kelas bahasa Prancis dan persiapan karir. Bimbingan untuk merencanakan langkah menuju Kanada.</p>
+        <p class="footer-company"><strong>PT LUNGA CAKRAWALA GLOBALINDO</strong><br>Klaten, Jawa Tengah 57454<br>Bahasa Prancis &amp; persiapan Kanada.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Jelajah</h2>
+        <a href="#program">Program</a>
+        <a href="#proses">Tahapan</a>
+        <a href="#kegiatan">Kegiatan</a>
+        <a href="#tips">Sharing &amp; Tips</a>
+        <a href="#news-update">News Update</a>
+  <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="footer-column">
+        <h2>Hubungi</h2>
+        <a href="mailto:lungaabroad@gmail.com">lungaabroad@gmail.com</a>
+        <a href="https://wa.me/6285842540779" target="_blank" rel="noopener noreferrer">WhatsApp konsultasi <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="footer-column footer-socials">
+        <h2>Ikuti</h2>
+        <a href="https://www.instagram.com/lungaabroad.id/" target="_blank" rel="noopener noreferrer"><span class="social-mark">ig</span>Instagram <span aria-hidden="true">↗</span></a>
+        <a href="https://www.tiktok.com/@lungaabroad.id" target="_blank" rel="noopener noreferrer"><span class="social-mark">♪</span>TikTok <span aria-hidden="true">↗</span></a>
+        <a href="https://www.facebook.com/lungaabroad.id/" target="_blank" rel="noopener noreferrer"><span class="social-mark">f</span>Facebook <span aria-hidden="true">↗</span></a>
+        <a href="https://www.threads.net/@lungaabroad.id" target="_blank" rel="noopener noreferrer"><span class="social-mark">@</span>Threads <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="current-year"></span> Lungaabroad.id. Hak cipta dilindungi.</p>
+      <p>Informasi visa, imigrasi, dan ujian dapat berubah. Selalu verifikasi di situs resmi IRCC, kedutaan, dan penyelenggara ujian.</p>
+    </div>
+  </div>
+</footer>
+<script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
