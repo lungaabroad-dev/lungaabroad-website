@@ -210,8 +210,24 @@ function renderProgramOverview(program, selectedPackage) {
       const label = document.createElement("span");
       label.textContent = fact[0];
       const value = document.createElement("strong");
-      value.textContent = fact[1];
-      card.append(label, value);
+      const priceMatch = fact[0].toLowerCase() === "biaya" ? fact[1].match(/^Rp([\d.]+)(.*)$/) : null;
+      if (priceMatch) {
+        const originalAmount = Number(priceMatch[1].replace(/\./g, "")) + 1000000;
+        const originalPrice = document.createElement("s");
+        originalPrice.className = "program-fact-price-original";
+        originalPrice.textContent = `Rp${new Intl.NumberFormat("id-ID").format(originalAmount)}${priceMatch[2]}`;
+        const promoLabel = document.createElement("small");
+        promoLabel.className = "program-fact-price-label";
+        promoLabel.textContent = "Harga promo";
+        value.className = "program-fact-price-current";
+        value.textContent = fact[1];
+        card.classList.add("program-fact-price-card");
+        card.setAttribute("aria-label", `Harga promo ${fact[1]}, harga normal ${originalPrice.textContent}`);
+        card.append(label, originalPrice, promoLabel, value);
+      } else {
+        value.textContent = fact[1];
+        card.append(label, value);
+      }
       return card;
     }));
   }
@@ -318,3 +334,5 @@ if (levelTabs.length && levelPanel) {
     });
   });
 }
+
+
