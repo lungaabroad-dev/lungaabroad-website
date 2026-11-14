@@ -290,3 +290,53 @@ if (choiceTrack) {
     });
   });
 }
+/* Gerbang disclaimer; persetujuan diingat sampai sesi tab/browser berakhir. */
+(function setupDisclaimerGate() {
+  const storageKey = "lungaabroad-disclaimer-accepted-session-v1";
+  try {
+    if (window.sessionStorage.getItem(storageKey) === "yes") return;
+  } catch (error) {
+    // Tetap tampilkan disclaimer jika penyimpanan browser dibatasi.
+  }
+
+  const gate = document.createElement("div");
+  gate.className = "disclaimer-gate";
+  gate.innerHTML = `
+    <section class="disclaimer-panel" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title" aria-describedby="disclaimer-copy">
+      <span class="disclaimer-mark" aria-hidden="true">!</span>
+      <h2 id="disclaimer-title">DISCLAIMER!</h2>
+      <p id="disclaimer-copy">PROGRAM DI LUNGAABROAD DIKHUSUSKAN HANYA UNTUK ORANG YANG BERDEDIKASI TINGGI, BERKEINGINAN KUAT UNTUK BELAJAR, YAKIN TERHADAP MASA DEPAN YANG LEBIH BAIK, SELALU OPTIMIS, TIDAK MUDAH MENYERAH, BERSABAR, SIAP DENGAN TANTANGAN, DAN KONSISTEN DENGAN PROGRAM INTENSIF KAMI. TIDAK COCOK UNTUK ORANG PEMALAS, TIDAK YAKIN DENGAN DIRI SENDIRI, MUDAH MENYERAH, TIDAK SIAP DENGAN TANTANGAN DAN KESABARAN.</p>
+      <div class="disclaimer-actions">
+        <button class="button disclaimer-accept" type="button" data-disclaimer-accept>SAYA YAKIN</button>
+        <button class="button button-secondary disclaimer-unsure" type="button" data-disclaimer-unsure>BELUM YAKIN</button>
+      </div>
+    </section>`;
+
+  document.body.classList.add("disclaimer-open");
+  document.body.append(gate);
+
+  function enterWebsite() {
+    try {
+      window.sessionStorage.setItem(storageKey, "yes");
+    } catch (error) {
+      // Pengunjung tetap bisa masuk walau penyimpanan sesi tidak tersedia.
+    }
+    gate.classList.add("is-closing");
+    document.body.classList.remove("disclaimer-open");
+    window.setTimeout(function () { gate.remove(); }, 280);
+  }
+
+  const actions = gate.querySelector(".disclaimer-actions");
+  gate.querySelector("[data-disclaimer-accept]").addEventListener("click", enterWebsite);
+  gate.querySelector("[data-disclaimer-unsure]").addEventListener("click", function () {
+    const sureButton = document.createElement("button");
+    sureButton.className = "button disclaimer-accept disclaimer-confirm";
+    sureButton.type = "button";
+    sureButton.textContent = "HARUS YAKIN !";
+    sureButton.addEventListener("click", enterWebsite);
+    actions.replaceChildren(sureButton);
+    sureButton.focus();
+  });
+
+  gate.querySelector("[data-disclaimer-accept]").focus();
+})();
