@@ -31,6 +31,7 @@ const yearElement = document.querySelector("#current-year");
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
+
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector("#mobile-menu");
 
@@ -290,6 +291,7 @@ if (choiceTrack) {
     });
   });
 }
+
 /* Gerbang disclaimer; persetujuan diingat sampai sesi tab/browser berakhir. */
 (function setupDisclaimerGate() {
   const storageKey = "lungaabroad-disclaimer-accepted-session-v1";
