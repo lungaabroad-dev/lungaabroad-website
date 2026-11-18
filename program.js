@@ -43,9 +43,9 @@ const programCatalog = {
   extension: {
     name: "Program Extension",
     title: 'Lanjutkan kemampuanmu <span>ke level berikutnya.</span>',
-    intro: "Program lanjutan untuk mengembangkan kemampuan bahasa Prancis dari B1 menuju B2 (30%).",
+    intro: "Program lanjutan untuk mengembangkan kemampuan bahasa Prancis menuju mastering B1.",
     packages: [{
-      name: "B1 – B2 · A2 menuju mastering B1",
+      name: "B1  · A2 menuju mastering B1",
       duration: "3 bulan",
       detail: "Kurikulum lanjutan dari refreshment A2 menuju mastering B1 dengan fokus bahasa dan komunikasi.",
       summary: "Pendalaman tata bahasa, kosakata akademik dan profesional, percakapan berbasis studi kasus, serta strategi ujian.",
