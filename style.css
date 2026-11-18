@@ -15,6 +15,39 @@
 .scroll-reveal{opacity:0;transform:translateY(18px);transition:opacity 560ms ease-out,transform 560ms ease-out;will-change:opacity,transform}.scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
 @media(max-width:850px){.hero-grid,.about-grid,.faq-layout,.contact-layout{grid-template-columns:1fr;gap:34px}.hero{padding-top:64px}.hero-visual{min-height:410px}.number-item{padding-inline:12px}.process-list{grid-template-columns:1fr 1fr;gap:28px 18px}.tutor-grid{grid-template-columns:1fr 1fr}.tip-row{grid-template-columns:135px 1fr;gap:8px 18px}.tip-row p,.tip-row a{grid-column:2}.tips-heading{display:block}.gallery-image-wrap{aspect-ratio:16/10}}
 @media(max-width:600px){.container{width:min(calc(100% - 32px),var(--width))}.nav{min-height:68px}.nav-links,.header .nav>.button{display:none}.menu-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 15px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-size:13px;font-weight:700}.mobile-menu:not([hidden]){position:absolute;top:100%;right:16px;left:16px;z-index:20;display:grid;gap:4px;padding:10px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 16px 40px #18335324}.mobile-menu a{padding:12px;border-radius:10px;font-size:14px;font-weight:700}.hero{padding:56px 0 38px}h1{font-size:clamp(42px,12vw,58px);letter-spacing:-2.5px}.hero-copy{font-size:15px}.hero-visual{min-height:370px}.orbit{width:310px;height:310px}.journey-card{padding:20px}.floating-tag{right:0;bottom:5px}.number-grid{grid-template-columns:1fr 1fr;row-gap:14px}.number-item:nth-child(3){padding-left:0;border-left:0}.number-item strong{font-size:22px}.section{padding:66px 0}.program-grid{grid-template-columns:1fr}.program-card{min-height:260px;padding:22px}.process-list{grid-template-columns:1fr;gap:20px}.process-step{padding:16px 0 0 20px;border-top:0;border-left:1px solid #cbd7e5}.process-step:before{top:20px;left:-5px}.tutor-card{padding:16px}.gallery-image-wrap{aspect-ratio:4/3}.gallery-caption-row{align-items:flex-start;flex-direction:column;gap:4px;padding:18px 16px 14px}.gallery-thumbnails{gap:6px;padding:0 16px 16px}.tip-row{grid-template-columns:1fr;gap:9px;padding:18px 4px}.tip-row p,.tip-row a{grid-column:auto}.faq-layout,.contact-layout{gap:28px}.contact-form{padding:20px}.footer-content{align-items:flex-start;flex-direction:column}}
+
+/* Class moments and webinar highlights within one activity section. */
+.activities-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:20px}
+.activity-panel{display:flex;min-width:0;height:100%;flex-direction:column;padding:22px;border:1px solid #dce5ef;border-radius:22px;background:#fff;box-shadow:0 16px 42px #1833530b}
+.activity-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:10px}
+.activity-label{margin:0 0 6px;color:#bb5426;font-size:9px;font-weight:850;letter-spacing:1.3px}
+.activity-panel-heading h3{margin:0;color:var(--navy);font-size:clamp(18px,2vw,22px);line-height:1.3;letter-spacing:-.4px}
+.activity-description{margin:0 0 17px;color:var(--muted);font-size:12px;line-height:1.65}
+.activity-scroll-controls{display:flex;gap:7px;flex:none}
+.activity-scroll-button{width:36px;height:36px;border:1px solid #dce5ef;border-radius:50%;background:#fff;color:var(--navy);font-size:22px;line-height:1;cursor:pointer;transition:background-color .2s,color .2s,transform .2s}
+.activity-scroll-button:hover{transform:scale(1.04);border-color:var(--orange);background:var(--orange);color:#fff}
+.classroom-gallery{display:flex;gap:14px;overflow-x:auto;padding:1px 2px 13px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#b9c8d8 transparent;overscroll-behavior-inline:contain}
+.classroom-gallery:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.classroom-moment{flex:0 0 clamp(220px,35%,290px);min-width:0;margin:0;scroll-snap-align:start}
+.classroom-image-frame{display:grid;place-items:center;aspect-ratio:16/9;overflow:hidden;border:1px solid #dce5ef;border-radius:15px;background:#101a28}
+.classroom-image-frame img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.classroom-moment figcaption{display:flex;align-items:flex-start;gap:10px;padding:11px 2px 2px;color:var(--navy);font-size:11px;line-height:1.5}
+.classroom-moment figcaption span{flex:none;color:var(--orange);font-size:9px;font-weight:850;letter-spacing:.5px}
+.classroom-moment figcaption strong{font-weight:750}
+.activity-scroll-hint{margin:2px 0 0;color:#7a899b;font-size:10px}.activity-scroll-hint span{color:var(--orange);font-weight:900}
+.activity-panel .gallery{flex:1;border-radius:15px;box-shadow:none}
+.activity-panel .gallery-image-wrap{aspect-ratio:16/9}
+.activity-panel .gallery-image{object-fit:contain;background:#101a28}
+.activity-webinar-panel .gallery-arrow{width:34px;height:34px;font-size:22px}
+.activity-webinar-panel .gallery-prev{left:10px}.activity-webinar-panel .gallery-next{right:10px}
+.activity-panel .gallery-caption-row{align-items:flex-start;flex-direction:column;gap:4px;padding:13px 14px 8px}
+.activity-panel .gallery-caption-row h3{font-size:14px}
+.activity-panel .gallery-name{margin:0;font-size:10px}
+.activity-panel .gallery-counter{font-size:9px}
+.activity-panel .gallery-thumbnails{display:flex;gap:6px;padding:0 14px 14px}
+.activity-panel .gallery-thumb{flex:1;min-width:0;border-radius:7px}
+@media(max-width:900px){.activities-layout{grid-template-columns:1fr}.activity-panel{height:auto}.activity-class-panel{order:0}.activity-webinar-panel{order:1}.classroom-moment{flex-basis:clamp(240px,43%,330px)}}
+@media(max-width:600px){.activity-panel{padding:16px;border-radius:18px}.activity-panel-heading h3{font-size:18px}.classroom-moment{flex-basis:min(78vw,300px)}.activity-panel .gallery-image-wrap{aspect-ratio:16/10}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-reveal{opacity:1;transform:none;transition:none}}
 
 
@@ -663,3 +696,176 @@ body.disclaimer-open{overflow:hidden}
 .program-fact-price-card .program-fact-price-label{align-self:flex-start;padding:4px 8px;border-radius:999px;background:#fff0e7;color:#b74f1e;font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
 .program-fact-price-card .program-fact-price-current{color:var(--navy);font-size:clamp(16px,1.8vw,21px);font-weight:850;line-height:1.25;letter-spacing:-.4px}
 @media(max-width:600px){.program-fact-price-card .program-fact-price-current{font-size:16px}.program-fact-price-card .program-fact-price-original{font-size:13px}}
+
+/* Tentang Kami */
+.aboutus-page .nav-links .is-current{color:var(--orange)}
+.aboutus-hero{position:relative;isolation:isolate;overflow:hidden;padding:90px 0 82px;background:linear-gradient(130deg,#f2f6fb 0%,#fff 58%,#f9f4ef 100%)}
+.aboutus-hero:before{position:absolute;z-index:-1;top:-260px;right:-150px;width:700px;height:700px;border:1px solid #dbe5f0;border-radius:50%;content:"";box-shadow:0 0 0 55px #e8eef533,0 0 0 110px #e8eef51b}
+.aboutus-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);align-items:center;gap:56px}
+.aboutus-hero h1{max-width:750px;font-size:clamp(48px,6.5vw,78px);letter-spacing:-3px}.aboutus-hero h1 span,.aboutus-section-heading h2 span,.aboutus-intro-grid h2 span,.aboutus-story-grid h2 span,.aboutus-final-cta h2 span{color:var(--orange)}
+.aboutus-hero-subtitle{max-width:620px;margin:23px 0 10px;color:#3d526d;font-size:clamp(17px,2vw,21px);font-weight:650;line-height:1.5}.aboutus-hero-description{max-width:650px;color:var(--muted);font-size:14px;line-height:1.85}
+.aboutus-hero-visual{position:relative;min-height:400px;display:grid;place-items:center}.aboutus-orbit{position:absolute;width:min(390px,90%);aspect-ratio:1;border:1px solid #ccd9e8;border-radius:50%;box-shadow:0 0 0 28px #edf2f885,0 0 0 62px #edf2f84a}.aboutus-hero-panel{position:relative;z-index:1;width:min(100%,370px);padding:28px;border:1px solid #dbe5ef;border-radius:24px;background:#ffffffed;box-shadow:0 28px 75px #14274318}.aboutus-hero-panel>p{margin:0 0 17px;color:#74839a;font-size:10px;font-weight:800;letter-spacing:1.4px}.aboutus-hero-panel>strong{display:block;color:var(--navy);font-size:clamp(33px,4vw,45px);line-height:1.12;letter-spacing:-1.5px}.aboutus-hero-panel>strong span{color:var(--orange)}.aboutus-hero-steps{display:grid;gap:0;margin-top:24px;border-top:1px solid #e5ebf2}.aboutus-hero-steps span{padding:11px 0;border-bottom:1px solid #e5ebf2;color:#586a80;font-size:11px;font-weight:700}.aboutus-visual-mark{position:absolute;right:1%;bottom:4%;color:#f4783519;font-size:70px;font-weight:900;letter-spacing:-5px}
+.aboutus-section{padding:80px 0}.aboutus-intro-grid,.aboutus-story-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:66px;align-items:start}.aboutus-intro-grid .section-heading,.aboutus-story-grid .section-heading{position:sticky;top:112px}.aboutus-intro-grid h2,.aboutus-story-grid h2,.aboutus-section-heading h2{margin:0;font-size:clamp(34px,4.5vw,53px);line-height:1.1;letter-spacing:-1.8px}.aboutus-intro-copy>p,.aboutus-story-copy>p{margin:0 0 17px;color:#5f7086;font-size:14px;line-height:1.85}.aboutus-positioning{display:block;margin:23px 0;color:var(--navy);font-size:clamp(17px,2.3vw,22px);letter-spacing:.3px}.aboutus-boundary{padding:16px 18px;border-left:3px solid var(--orange);border-radius:0 12px 12px 0;background:#fff6f0;font-size:12px!important}
+.aboutus-team-section{background:#f4f7fb}.aboutus-section-heading{max-width:720px;margin-bottom:32px}.aboutus-section-heading>p:not(.eyebrow){color:var(--muted);font-size:14px}.aboutus-team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.aboutus-team-card{display:grid;grid-template-columns:minmax(125px,.72fr) 1.28fr;align-items:start;gap:20px;padding:20px;border:1px solid #dce5ef;border-radius:20px;background:#fff;box-shadow:0 14px 38px #16325208}.aboutus-team-portrait{position:relative;overflow:hidden;width:100%;aspect-ratio:4/5;border-radius:15px;background:#e8edf4}.aboutus-team-portrait img{display:block;width:100%;height:100%;object-fit:cover}.aboutus-team-portrait.is-placeholder{display:grid;place-items:center;background:radial-gradient(circle at 73% 26%,#f4783540,transparent 28%),linear-gradient(145deg,#102d52,#071a35);color:#fff}.aboutus-team-portrait.is-placeholder:before{position:absolute;right:-25%;bottom:-15%;width:95%;aspect-ratio:1;border:1px solid #ffffff25;border-radius:50%;content:"";box-shadow:0 0 0 20px #ffffff08,0 0 0 42px #ffffff06}.aboutus-team-portrait.is-placeholder span{position:relative;font-size:clamp(32px,4vw,48px);font-weight:850;letter-spacing:-2px}.aboutus-team-body{min-width:0}.aboutus-team-title{margin:2px 0 7px;color:#bb5426;font-size:9px;font-weight:850;letter-spacing:.9px;line-height:1.5;text-transform:uppercase}.aboutus-team-body h3{margin:0 0 10px;font-size:20px;line-height:1.22;letter-spacing:-.4px}.aboutus-team-description{margin:0;color:#687990;font-size:11px;line-height:1.7}.aboutus-team-background{display:grid;gap:8px;margin:14px 0 0;padding-top:13px;border-top:1px solid #e9edf3}.aboutus-team-background>div{display:grid;gap:3px}.aboutus-team-background dt{color:var(--navy);font-size:9px;font-weight:800;text-transform:uppercase}.aboutus-team-background dd{margin:0;color:#718097;font-size:10px;line-height:1.55}
+.aboutus-story-grid{grid-template-columns:.72fr 1.28fr}.aboutus-timeline{display:grid;gap:0;margin:26px 0 0;padding:0;list-style:none}.aboutus-timeline:not([hidden]){display:grid}.aboutus-timeline li{display:grid;grid-template-columns:70px 1fr;gap:17px;padding:19px 0;border-top:1px solid var(--line)}.aboutus-timeline li>strong{color:var(--orange);font-size:13px}.aboutus-timeline h3{margin:0 0 5px;font-size:15px}.aboutus-timeline p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.aboutus-vision-section{background:#f5f8fc}.aboutus-draft-note{display:inline-flex;margin:0 0 18px;padding:7px 11px;border:1px solid #f1d7c8;border-radius:999px;background:#fff8f3;color:#9d4c29;font-size:10px;font-weight:800}.aboutus-vision-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:16px}.aboutus-vision-card,.aboutus-mission-card{padding:28px;border:1px solid var(--line);border-radius:19px;background:#fff}.aboutus-vision-card{background:var(--navy);color:#fff}.aboutus-vision-card>span,.aboutus-mission-card>span{color:var(--orange);font-size:10px;font-weight:850;letter-spacing:1px}.aboutus-vision-card h3{margin:21px 0 0;font-size:clamp(21px,2.7vw,30px);line-height:1.45;letter-spacing:-.5px}.aboutus-mission-card ol{display:grid;gap:12px;margin:19px 0 0;padding:0;list-style:none;counter-reset:mission}.aboutus-mission-card li{position:relative;display:grid;grid-template-columns:27px 1fr;gap:10px;color:#5e7087;font-size:12px;line-height:1.65;counter-increment:mission}.aboutus-mission-card li:before{content:"0" counter(mission);color:var(--orange);font-size:10px;font-weight:850}
+.aboutus-legal-grid{display:grid;grid-template-columns:1fr .85fr;gap:18px;margin-top:28px}.aboutus-legal-card,.aboutus-qr-card{padding:27px;border:1px solid var(--line);border-radius:19px;background:#fff}.aboutus-legal-label{margin:0 0 8px;color:#76859a;font-size:9px;font-weight:850;letter-spacing:1px;text-transform:uppercase}.aboutus-legal-card h3{margin:0 0 24px;font-size:24px;letter-spacing:-.5px}.aboutus-kbli-list{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 20px;padding:0;list-style:none}.aboutus-kbli-list li{padding:9px 12px;border:1px solid #dce5ef;border-radius:999px;background:#f7f9fc;color:var(--navy);font-size:12px;font-weight:800}.aboutus-legal-note,.aboutus-qr-note{margin:0;color:#748399;font-size:11px;line-height:1.7}.aboutus-qr-heading{display:flex;align-items:center;gap:12px}.aboutus-qr-heading h3{margin:0;font-size:17px}.aboutus-qr-mark{display:grid;width:42px;height:42px;place-items:center;border-radius:12px;background:#fff0e7;color:var(--orange);font-size:11px;font-weight:900}.aboutus-qr-frame{display:grid;place-items:center;min-height:220px;margin:19px 0 12px;padding:14px;border:1px dashed #b8c7d8;border-radius:15px;background:#f7f9fc}.aboutus-qr-image{display:block;width:min(100%,240px);height:auto;max-height:270px;object-fit:contain}.aboutus-qr-image[hidden],.aboutus-qr-placeholder[hidden]{display:none}.aboutus-qr-placeholder{display:grid;justify-items:center;gap:12px;color:#738299;text-align:center}.aboutus-qr-placeholder>span{display:grid;width:112px;height:112px;place-items:center;border:1px solid #cad5e2;border-radius:12px;background:repeating-linear-gradient(135deg,#eef2f7 0 8px,#f8fafc 8px 16px);color:#8290a2;font-size:16px;font-weight:900;letter-spacing:1px}.aboutus-qr-placeholder small{max-width:190px;font-size:10px;line-height:1.5}.aboutus-qr-caption{margin:0 0 7px;color:var(--navy);font-size:10px;font-weight:750;line-height:1.6}
+.aboutus-commitment-section{background:linear-gradient(135deg,#0b1d36,#102b4e);color:#fff}.aboutus-commitment-heading{max-width:740px}.aboutus-commitment-heading .eyebrow{color:#d5deea}.aboutus-commitment-heading h2{margin:0;font-size:clamp(34px,5vw,55px);line-height:1.12;letter-spacing:-1.8px}.aboutus-commitment-heading h2 span{color:#ff935f}.aboutus-commitment-heading>p:not(.eyebrow){max-width:700px;color:#c2cede;font-size:14px;line-height:1.8}.aboutus-values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:35px}.aboutus-values-grid article{padding:23px;border:1px solid #ffffff22;border-radius:16px;background:#ffffff09}.aboutus-values-grid article>span{color:#ff935f;font-size:11px;font-weight:850}.aboutus-values-grid h3{margin:14px 0 7px;font-size:18px}.aboutus-values-grid p{margin:0;color:#c2cede;font-size:12px;line-height:1.7}.aboutus-final-cta .container{max-width:900px}.aboutus-final-cta .hero-actions{justify-content:center}.aboutus-final-cta .button-secondary{color:var(--navy)}
+@media(max-width:900px){.aboutus-hero-grid{grid-template-columns:1fr 340px;gap:25px}.aboutus-team-grid{grid-template-columns:1fr}.aboutus-team-card{grid-template-columns:170px 1fr}.aboutus-intro-grid,.aboutus-story-grid{gap:35px}}
+@media(max-width:700px){.aboutus-hero{padding:62px 0 50px}.aboutus-hero-grid{grid-template-columns:1fr;gap:28px}.aboutus-hero h1{font-size:clamp(43px,11vw,59px);letter-spacing:-2.3px}.aboutus-hero-visual{min-height:330px}.aboutus-orbit{width:300px}.aboutus-hero-panel{max-width:350px}.aboutus-section{padding:62px 0}.aboutus-intro-grid,.aboutus-story-grid{grid-template-columns:1fr;gap:20px}.aboutus-intro-grid .section-heading,.aboutus-story-grid .section-heading{position:static}.aboutus-team-card{grid-template-columns:minmax(120px,.7fr) 1.3fr;gap:15px;padding:15px}.aboutus-team-body h3{font-size:18px}.aboutus-team-description{font-size:10px}.aboutus-vision-grid,.aboutus-legal-grid{grid-template-columns:1fr}.aboutus-values-grid{grid-template-columns:1fr}.aboutus-commitment-heading h2{font-size:clamp(33px,9vw,44px)}}
+@media(max-width:430px){.aboutus-team-card{grid-template-columns:1fr}.aboutus-team-portrait{max-width:220px;aspect-ratio:4/3}.aboutus-team-portrait.is-placeholder span{font-size:38px}.aboutus-team-body h3{font-size:19px}.aboutus-team-description{font-size:11px}.aboutus-vision-card,.aboutus-mission-card,.aboutus-legal-card,.aboutus-qr-card{padding:21px}.aboutus-qr-frame{min-height:190px}}
+
+/* About page: editorial company portfolio, distinct from sales landing pages. */
+.aboutus-page{--about-paper:#f4f1eb;--about-ink:#0b1d36;--about-muted:#697789}
+.aboutus-page .header{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.aboutus-page .nav-links .is-current{color:var(--orange)}
+.aboutus-cover{min-height:650px;padding:0;background:var(--about-paper);}
+.aboutus-cover:before{display:none}
+.aboutus-cover-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr);min-height:600px;align-items:stretch;gap:0}
+.aboutus-cover-copy{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:68px clamp(20px,5vw,76px) 80px 0}
+.aboutus-kicker{display:flex;align-items:center;gap:18px;margin:0 0 30px;color:#63738a;font-size:10px;font-weight:850;letter-spacing:1.8px;text-transform:uppercase}
+.aboutus-kicker span+span{padding-left:18px;border-left:1px solid #cbd2db;color:#8993a0}
+.aboutus-cover h1{max-width:810px;margin:0;color:var(--about-ink);font-size:clamp(58px,8.4vw,112px);font-weight:800;line-height:.91;letter-spacing:-.075em}
+.aboutus-cover h1 span{color:var(--orange)}
+.aboutus-cover .aboutus-hero-subtitle{max-width:580px;margin:30px 0 9px;color:#334762;font-size:clamp(16px,1.65vw,20px);font-weight:650;line-height:1.5}
+.aboutus-cover .aboutus-hero-description{max-width:620px;margin:0;color:#68778a;font-size:13px;line-height:1.85}
+.aboutus-cover-actions{display:flex;gap:25px;margin-top:29px}
+.aboutus-cover-actions a{display:inline-flex;align-items:center;gap:10px;padding:0 0 8px;border-bottom:1px solid #b7c0ca;color:var(--about-ink);font-size:12px;font-weight:800;text-decoration:none;transition:color .2s,border-color .2s}
+.aboutus-cover-actions a:hover{border-color:var(--orange);color:var(--orange)}
+.aboutus-cover-aside{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:600px;margin-right:calc((100vw - min(100vw - 40px, 1200px))/ -2);padding:42px clamp(27px,4vw,60px);overflow:hidden;background:var(--about-ink);color:#fff}
+.aboutus-cover-aside:after{position:absolute;right:-145px;bottom:60px;width:380px;height:380px;border:1px solid #ffffff23;border-radius:50%;content:"";box-shadow:0 0 0 42px #ffffff08,0 0 0 86px #ffffff06}
+.aboutus-cover-brand{position:relative;z-index:1;display:flex;align-items:center;gap:12px;font-size:18px;font-weight:900;letter-spacing:-.6px;line-height:.95}
+.aboutus-cover-brand img{width:42px;height:42px;object-fit:contain}
+.aboutus-cover-brand b{color:#ff935f;font-size:11px;letter-spacing:2px}
+.aboutus-cover-index{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:start;padding-top:20px;border-top:1px solid #ffffff31;color:#c4cfdd;font-size:10px;line-height:1.6}
+.aboutus-cover-index span:first-child{color:#ff935f;font-weight:850;letter-spacing:1px}
+.aboutus-cover-statement{position:relative;z-index:1;display:flex;align-items:start;gap:15px;margin:0 0 auto;padding-top:74px}
+.aboutus-cover-line{width:35px;height:2px;margin-top:10px;background:#ff935f}
+.aboutus-cover-statement p{margin:0;font-size:clamp(18px,2vw,25px);font-weight:650;line-height:1.35;letter-spacing:-.6px}
+.aboutus-cover-footer{position:relative;z-index:1;display:flex;justify-content:space-between;padding-top:17px;border-top:1px solid #ffffff31;color:#b8c4d2;font-size:9px;font-weight:800;letter-spacing:1.3px}
+.aboutus-cover-bottom{display:flex;justify-content:space-between;gap:20px;padding:13px max(20px,calc((100vw - 1200px)/2));border-top:1px solid #dedbd4;color:#828b96;font-size:9px;font-weight:850;letter-spacing:1.5px}
+.aboutus-cover-bottom span:last-child{color:var(--orange)}
+.aboutus-page .aboutus-section{padding:100px 0}
+.aboutus-page .aboutus-intro-grid,.aboutus-page .aboutus-story-grid{grid-template-columns:.75fr 1.25fr;gap:9vw}
+.aboutus-page .aboutus-intro-grid h2,.aboutus-page .aboutus-story-grid h2,.aboutus-page .aboutus-section-heading h2{font-size:clamp(35px,4vw,54px);letter-spacing:-.055em}
+.aboutus-page .aboutus-intro-grid h2 span,.aboutus-page .aboutus-story-grid h2 span,.aboutus-page .aboutus-section-heading h2 span{color:var(--orange)}
+.aboutus-page .aboutus-intro-copy>p,.aboutus-page .aboutus-story-copy>p{font-size:15px;line-height:1.95}
+.aboutus-page .aboutus-positioning{margin-top:30px;padding-top:22px;border-top:1px solid #dce1e6;font-size:19px}
+.aboutus-page .aboutus-boundary{background:#f8f4ee;border-left-color:var(--orange);font-size:12px!important}
+.aboutus-page .aboutus-team-section{background:#e9edf1}
+.aboutus-page .aboutus-section-heading{max-width:920px;margin-bottom:42px}
+.aboutus-page .aboutus-team-grid{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid #cbd3dc}
+.aboutus-page .aboutus-team-card{grid-template-columns:58px 150px minmax(0,1fr);align-items:center;gap:24px;padding:23px 10px;border:0;border-bottom:1px solid #cbd3dc;border-radius:0;background:transparent;box-shadow:none}
+.aboutus-page .aboutus-team-card:before{content:counter(about-team,decimal-leading-zero);counter-increment:about-team;color:#8793a1;font-size:11px;font-weight:800;letter-spacing:1px}
+.aboutus-page .aboutus-team-grid{counter-reset:about-team}
+.aboutus-page .aboutus-team-portrait{width:150px;aspect-ratio:1;border-radius:0;background:#d9dfe5}
+.aboutus-page .aboutus-team-portrait.is-placeholder{background:linear-gradient(140deg,#16375c,#0a1b33)}
+.aboutus-page .aboutus-team-portrait.is-placeholder:before{right:-20%;bottom:-40%;box-shadow:0 0 0 18px #ffffff08,0 0 0 36px #ffffff05}
+.aboutus-page .aboutus-team-title{font-size:9px;letter-spacing:1.3px}
+.aboutus-page .aboutus-team-body h3{font-size:23px;letter-spacing:-.7px}
+.aboutus-page .aboutus-team-description{max-width:740px;font-size:12px;line-height:1.8}
+.aboutus-page .aboutus-vision-section{background:#f4f1eb}
+.aboutus-page .aboutus-vision-card,.aboutus-page .aboutus-mission-card,.aboutus-page .aboutus-legal-card,.aboutus-page .aboutus-qr-card{border-radius:2px;box-shadow:none}
+.aboutus-page .aboutus-vision-grid{gap:0;border:1px solid #d8dde2}
+.aboutus-page .aboutus-vision-card,.aboutus-page .aboutus-mission-card{padding:34px;border:0;border-radius:0}
+.aboutus-page .aboutus-mission-card{border-left:1px solid #d8dde2}
+.aboutus-page .aboutus-legal-grid{gap:0;border-top:1px solid #d8dde2;border-bottom:1px solid #d8dde2}
+.aboutus-page .aboutus-legal-card,.aboutus-page .aboutus-qr-card{padding:30px;border:0;border-radius:0;background:transparent}
+.aboutus-page .aboutus-qr-card{border-left:1px solid #d8dde2}
+.aboutus-page .aboutus-qr-frame{border-radius:2px}
+.aboutus-page .aboutus-commitment-section{background:#0b1d36}
+.aboutus-page .aboutus-values-grid{gap:0;border-top:1px solid #ffffff38;border-bottom:1px solid #ffffff38}
+.aboutus-page .aboutus-values-grid article{padding:22px 25px;border:0;border-right:1px solid #ffffff38;border-radius:0;background:transparent}
+.aboutus-page .aboutus-values-grid article:last-child{border-right:0}
+.aboutus-page .aboutus-final-cta{background:#f4f1eb}
+.aboutus-page .aboutus-final-cta .container{max-width:880px}
+.aboutus-page .aboutus-final-cta h2{letter-spacing:-.055em}
+@media(max-width:900px){.aboutus-cover-grid{grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr)}.aboutus-cover-aside{margin-right:-20px;padding:34px 26px}.aboutus-page .aboutus-team-card{grid-template-columns:40px 125px minmax(0,1fr);gap:17px}.aboutus-page .aboutus-team-portrait{width:125px}.aboutus-page .aboutus-intro-grid,.aboutus-page .aboutus-story-grid{gap:5vw}}
+@media(max-width:700px){.aboutus-cover-grid{grid-template-columns:1fr}.aboutus-cover-copy{padding:60px 0 49px}.aboutus-cover h1{font-size:clamp(58px,15vw,88px)}.aboutus-cover-aside{min-height:300px;margin:0 -20px;padding:27px 24px}.aboutus-cover-statement{padding-top:38px}.aboutus-cover-bottom{padding:12px 20px;font-size:8px}.aboutus-page .aboutus-section{padding:67px 0}.aboutus-page .aboutus-intro-grid,.aboutus-page .aboutus-story-grid{grid-template-columns:1fr;gap:22px}.aboutus-page .aboutus-intro-grid .section-heading,.aboutus-page .aboutus-story-grid .section-heading{position:static}.aboutus-page .aboutus-team-card{grid-template-columns:27px 92px minmax(0,1fr);gap:13px;padding:18px 0}.aboutus-page .aboutus-team-portrait{width:92px}.aboutus-page .aboutus-team-body h3{font-size:18px}.aboutus-page .aboutus-team-description{font-size:11px}.aboutus-page .aboutus-vision-grid,.aboutus-page .aboutus-legal-grid{grid-template-columns:1fr}.aboutus-page .aboutus-mission-card,.aboutus-page .aboutus-qr-card{border-left:0;border-top:1px solid #d8dde2}.aboutus-page .aboutus-values-grid{grid-template-columns:1fr}.aboutus-page .aboutus-values-grid article{border-right:0;border-bottom:1px solid #ffffff38}.aboutus-page .aboutus-values-grid article:last-child{border-bottom:0}}
+@media(max-width:430px){.aboutus-page .aboutus-team-card{grid-template-columns:22px 76px minmax(0,1fr);gap:10px}.aboutus-page .aboutus-team-portrait{width:76px}.aboutus-page .aboutus-team-title{font-size:8px}.aboutus-page .aboutus-team-body h3{font-size:16px}.aboutus-page .aboutus-team-description{font-size:10px}}
+
+/* Softer future-facing cues for the company portfolio. */
+.aboutus-page{--about-glass:#ffffff12;--about-line:#ffffff25}
+.aboutus-cover{background:radial-gradient(ellipse at 72% 16%,#e4edf7 0,transparent 34%),linear-gradient(115deg,#f7f8fa 0%,#f3f1eb 70%,#f7f3ee 100%)}
+.aboutus-cover-copy{padding-right:clamp(25px,6vw,92px)}
+.aboutus-cover h1{max-width:760px;font-size:clamp(55px,7.5vw,98px);line-height:.98;letter-spacing:-.07em}
+.aboutus-cover h1 span{display:inline-block;padding-left:.12em}
+.aboutus-cover-aside{isolation:isolate;border-radius:30px 0 0 30px;background:linear-gradient(150deg,#122e50,#0a1b34 72%);box-shadow:-24px 24px 70px #122b4b14}
+.aboutus-cover-aside:before{position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 77% 36%,#4b769127,transparent 48%),linear-gradient(145deg,transparent 50%,#ffffff05);content:""}
+.aboutus-cover-aside:after{right:-210px;bottom:-170px;width:450px;height:450px;border-color:#ffffff14;box-shadow:0 0 0 46px #ffffff05,0 0 0 94px #ffffff04}
+.aboutus-cover-brand{width:max-content;padding:9px 14px 9px 9px;border:1px solid #ffffff20;border-radius:999px;background:#ffffff0b;backdrop-filter:blur(10px)}
+.aboutus-world-route{position:relative;z-index:1;flex:1;min-height:265px;margin:30px -8px 16px;padding:14px 13px 12px;border:1px solid #ffffff1e;border-radius:23px;background:linear-gradient(145deg,#ffffff0d,#ffffff05);box-shadow:inset 0 1px #ffffff09;overflow:hidden}
+.aboutus-world-topline{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;color:#c1cddd;font-size:8px;font-weight:850;letter-spacing:1.5px}
+.aboutus-live-dot{color:#8fd8be;font-size:10px;text-shadow:0 0 12px #8fd8be}
+.aboutus-world-route svg{position:absolute;inset:27px 0 18px;width:100%;height:calc(100% - 45px);overflow:visible}
+.world-latitude,.world-longitude{fill:none;stroke:#cad8e825;stroke-width:1}
+.world-latitude-inner{stroke-dasharray:3 7;opacity:.8}
+.world-route-path{fill:none;stroke:url(#route-gradient);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:5 7;animation:about-route-flow 9s linear infinite}
+.world-route-glow{fill:#ff8a5140;animation:about-route-pulse 4.6s ease-in-out infinite}
+.world-route-origin{fill:#ff985f;stroke:#fff;stroke-width:2}
+.world-route-destination{fill:#a9d4ff;stroke:#fff;stroke-width:2}
+.aboutus-route-label{position:absolute;display:grid;gap:2px;color:#fff;text-shadow:0 1px 8px #08182d}
+.aboutus-route-label b{font-size:11px;letter-spacing:.8px}
+.aboutus-route-label small{color:#c1cddd;font-size:7px;font-weight:800;letter-spacing:1px}
+.route-origin{top:55%;right:12%}.route-destination{top:30%;left:17%}
+.aboutus-world-caption{position:absolute;right:15px;bottom:11px;margin:0;color:#c1cddd;font-size:10px;line-height:1.5;text-align:right}
+.aboutus-world-caption strong{color:#fff;font-size:11px}
+.aboutus-cover-index{padding-top:14px;border-color:#ffffff20}
+.aboutus-cover-statement{padding-top:29px}
+.aboutus-cover-statement p{font-size:clamp(17px,1.6vw,22px)}
+.aboutus-cover-footer{border-color:#ffffff20}
+.aboutus-cover-bottom{border-color:#dce2e9;background:#f5f6f7;color:#737f8e}
+.aboutus-page .aboutus-team-section{position:relative;overflow:hidden;background:linear-gradient(135deg,#edf2f7,#f4f3ef)}
+.aboutus-page .aboutus-team-section:before{position:absolute;top:0;right:0;width:34%;height:100%;background:radial-gradient(ellipse at 100% 48%,#d8e5f240,transparent 68%);content:"";pointer-events:none}
+.aboutus-page .aboutus-team-card{transition:background-color .25s ease,transform .3s ease}
+.aboutus-page .aboutus-team-card:hover{transform:translateX(5px);background:#ffffff75}
+.aboutus-page .aboutus-team-portrait{border-radius:18px;box-shadow:0 8px 22px #102c4b12}
+.aboutus-page .aboutus-team-portrait.is-placeholder{background:radial-gradient(circle at 73% 26%,#f4783540,transparent 30%),linear-gradient(145deg,#183b61,#091c35)}
+.aboutus-page .aboutus-vision-section{background:linear-gradient(110deg,#f5f3ed,#f7f9fb)}
+.aboutus-page .aboutus-vision-grid{overflow:hidden;border-radius:22px;background:#ffffffa8;box-shadow:0 16px 44px #122b4b09}
+.aboutus-page .aboutus-vision-card{background:linear-gradient(145deg,#102a49,#0a1b34)}
+.aboutus-page .aboutus-mission-card{background:#ffffffa8}
+.aboutus-page .aboutus-legal-grid{overflow:hidden;border:1px solid #d8e0e8;border-radius:22px;background:#ffffffa3}
+.aboutus-page .aboutus-legal-card,.aboutus-page .aboutus-qr-card{background:transparent}
+.aboutus-page .aboutus-qr-frame{border-radius:16px;background:linear-gradient(145deg,#f8fafc,#eef3f8)}
+.aboutus-page .aboutus-commitment-section{background:radial-gradient(ellipse at 83% 5%,#244c7180,transparent 37%),linear-gradient(140deg,#0b1d36,#102b4e)}
+.aboutus-page .aboutus-values-grid article{transition:background-color .25s ease}
+.aboutus-page .aboutus-values-grid article:hover{background:#ffffff0d}
+.aboutus-page .aboutus-final-cta{background:radial-gradient(ellipse at 50% 0%,#e3edf6,transparent 58%),#f5f3ee}
+.aboutus-page .scroll-reveal{opacity:0;transform:translateY(14px);transition:opacity .62s ease,transform .62s cubic-bezier(.2,.75,.25,1);will-change:opacity,transform}
+.aboutus-page .scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+.aboutus-page .aboutus-team-card:nth-child(2){transition-delay:70ms}.aboutus-page .aboutus-team-card:nth-child(3){transition-delay:130ms}.aboutus-page .aboutus-team-card:nth-child(4){transition-delay:190ms}
+@keyframes about-route-flow{to{stroke-dashoffset:-96}}
+@keyframes about-route-pulse{0%,100%{opacity:.55;transform:scale(.88);transform-origin:317px 158px}50%{opacity:1;transform:scale(1.14);transform-origin:317px 158px}}
+@media(max-width:900px){.aboutus-world-route{min-height:235px;margin-top:23px}.aboutus-cover-aside{border-radius:25px 0 0 25px}}
+@media(max-width:700px){.aboutus-cover-aside{margin:0 -20px;border-radius:22px 22px 0 0}.aboutus-world-route{min-height:250px}.aboutus-cover-statement{padding-top:25px}}
+@media(prefers-reduced-motion:reduce){.aboutus-page .scroll-reveal{opacity:1;transform:none;transition:none}.world-route-path,.world-route-glow{animation:none!important}.aboutus-page .aboutus-team-card,.aboutus-page .aboutus-values-grid article{transition:none}}
+
+/* High-contrast solid closing panel on the About page. */
+.aboutus-page .aboutus-final-cta{background:#0b1d36!important;background-image:none!important;color:#fff}
+.aboutus-page .aboutus-final-cta .eyebrow{color:#d7e1ed}
+.aboutus-page .aboutus-final-cta h2{color:#fff}
+.aboutus-page .aboutus-final-cta h2 span{color:#ff8a4b}
+.aboutus-page .aboutus-final-cta .container>p:not(.eyebrow){color:#d0d9e5}
+.aboutus-page .aboutus-final-cta .button-secondary{border-color:#d6dfeb;background:#fff;color:#0b1d36}
+.aboutus-page .aboutus-final-cta .button-secondary:hover{background:#f1f5f9}
+
+/* Team portraits and legal QR: fixed display frames, original images stay uncropped. */
+.aboutus-page .aboutus-team-portrait{aspect-ratio:4 / 5;height:auto;background:#fff}
+.aboutus-page .aboutus-team-portrait img{width:100%;height:100%;object-fit:contain;object-position:center;background:#fff}
+.aboutus-page .aboutus-qr-image{width:min(100%,240px);height:240px;max-height:none;object-fit:contain;object-position:center;background:#fff}
+
+/* Compact legal QR and vertically stacked KBLI codes. */
+.aboutus-page .aboutus-kbli-list{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.aboutus-page .aboutus-kbli-list li{min-width:116px}
+.aboutus-page .aboutus-qr-frame{min-height:185px;padding:12px}
+.aboutus-page .aboutus-qr-image{width:min(100%,160px);height:160px;max-height:160px}
+.aboutus-page .aboutus-nib{margin:0 0 22px;color:#0b1d36;font-size:16px;font-weight:800;letter-spacing:.04em}
+.aboutus-page .aboutus-mission-card{min-width:0;padding:clamp(23px,3.2vw,36px)}
+.aboutus-page .aboutus-mission-card ol{gap:17px;margin-top:23px}
+.aboutus-page .aboutus-mission-card li{grid-template-columns:34px minmax(0,1fr);align-items:start;gap:12px;color:#5e7087;font-size:12px;line-height:1.65}
+.aboutus-page .aboutus-mission-card li:before{padding-top:2px;font-size:10px}
+.aboutus-page .aboutus-mission-copy{min-width:0}
+.aboutus-page .aboutus-mission-title{margin:0 0 4px;color:#10233e;font-size:13px;font-weight:800;line-height:1.4;letter-spacing:-.1px;overflow-wrap:anywhere}
+.aboutus-page .aboutus-mission-description{margin:0;color:#5e7087;font-size:11.5px;line-height:1.65}
+@media(max-width:700px){.aboutus-page .aboutus-mission-card{padding:24px}.aboutus-page .aboutus-mission-card ol{gap:15px}.aboutus-page .aboutus-mission-title{font-size:13px}.aboutus-page .aboutus-mission-description{font-size:12px}}
