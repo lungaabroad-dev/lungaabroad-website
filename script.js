@@ -84,8 +84,16 @@ if (tipFilters.length && tipCards.length) {
 }
 
 /* Animasi konten ketika masuk dan keluar dari viewport */
+const aboutPageRevealTargets = [
+  ".aboutus-cover-copy", ".aboutus-cover-aside", "#about-lunga .section-heading", ".aboutus-intro-copy",
+  "#about-team .aboutus-section-heading", ".aboutus-team-card", "#our-story .section-heading", ".aboutus-story-copy",
+  "#vision-mission .section-heading", ".aboutus-vision-grid", "#company-identity .section-heading", ".aboutus-legal-grid",
+  ".aboutus-commitment-heading", ".aboutus-values-grid", ".aboutus-final-cta .container"
+].join(", ");
+const standardRevealTargets =
+  "main h1, main h2, main h3, main p, main .button, main .number-item, main .program-card, main .process-step, main .about-panel, main .tutor-card, main .faq-item, main .tip-row, main .contact-form";
 const revealTargets = document.querySelectorAll(
-  "main h1, main h2, main h3, main p, main .button, main .number-item, main .program-card, main .process-step, main .about-panel, main .tutor-card, main .faq-item, main .tip-row, main .contact-form"
+  document.body.classList.contains("aboutus-page") ? aboutPageRevealTargets : standardRevealTargets
 );
 
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -105,32 +113,40 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
   });
 }
 
-/* Galeri foto kegiatan */
-const galleryImages = [
+/* Galeri kegiatan: kelas dan webinar berganti dengan jeda yang sama. */
+const activityGalleryImages = {
+  webinar: [
   { src: "assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.31.jpeg", alt: "Tangkapan layar Zoom webinar Francophone Mobility Canada dengan peserta dan tim Lungaabroad", caption: "Peserta dan Tim Lungaabroad" },
   { src: "assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.32.jpeg", alt: "Pemateri webinar Francophone Mobility, Mr Vincent", caption: "Pemateri Mr Vincent — Native Speaker French" },
   { src: "assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.32%20(1).jpeg", alt: "Pemateri webinar Francophone Mobility, Amanda Tri Budiarto", caption: "Pemateri Amanda Tri Budiarto" },
   { src: "assets/img/WhatsApp%20Image%202026-10-13%20at%2008.24.31%20(1).jpeg", alt: "Pemateri webinar Francophone Mobility, Mr Martin", caption: "Pemateri Mr Martin — Tutor France" }
-];
+  ],
+  class: [
+    { src: "assets/img/kelas-prancis/class-french-01.png", alt: "Sesi kuis interaktif mengenal kosakata dan budaya Prancis di kelas daring", caption: "Kuis kosakata dan budaya Prancis" },
+    { src: "assets/img/kelas-prancis/class-french-02.png", alt: "Materi ungkapan salam bahasa Prancis yang dibahas di kelas daring", caption: "Ungkapan salam dalam bahasa Prancis" },
+    { src: "assets/img/kelas-prancis/class-french-03.png", alt: "Latihan menyusun kalimat bahasa Prancis bersama peserta kelas", caption: "Latihan menyusun kalimat" },
+    { src: "assets/img/kelas-prancis/class-french-04.jpg", alt: "Sesi pembahasan latihan tata bahasa Prancis secara daring", caption: "Pembahasan tata bahasa Prancis" },
+    { src: "assets/img/kelas-prancis/class-french-05.jpg", alt: "Peserta mengikuti latihan bahasa Prancis bersama tutor melalui kelas daring", caption: "Latihan bersama tutor dan peserta" }
+  ]
+};
 
-const galleryImage = document.querySelector(".gallery-image");
-const galleryCaption = document.querySelector("#gallery-caption");
-const galleryCounter = document.querySelector("#gallery-counter");
-const galleryThumbs = document.querySelectorAll(".gallery-thumb");
-const galleryPrev = document.querySelector(".gallery-prev");
-const galleryNext = document.querySelector(".gallery-next");
+function initializeActivityGallery(galleryRoot, images) {
+  const galleryImage = galleryRoot.querySelector(".gallery-image");
+  const galleryCaption = galleryRoot.querySelector(".gallery-caption");
+  const galleryCounter = galleryRoot.querySelector(".gallery-counter");
+  const galleryThumbs = galleryRoot.querySelectorAll(".gallery-thumb");
+  const galleryPrev = galleryRoot.querySelector(".gallery-prev");
+  const galleryNext = galleryRoot.querySelector(".gallery-next");
+  if (!galleryImage || !galleryCaption || !galleryCounter || !galleryThumbs.length || !images) return;
 
-if (galleryImage && galleryCaption && galleryCounter && galleryThumbs.length) {
   let activeGalleryIndex = 0;
   let galleryChangeToken = 0;
   let galleryAutoplayTimer = 0;
   const galleryReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const galleryRoot = galleryImage.closest(".gallery");
 
   function showGalleryImage(index) {
-    activeGalleryIndex = (index + galleryImages.length) % galleryImages.length;
-    const image = galleryImages[activeGalleryIndex];
-    const nextIndex = activeGalleryIndex;
+    activeGalleryIndex = (index + images.length) % images.length;
+    const image = images[activeGalleryIndex];
     const changeToken = ++galleryChangeToken;
 
     function applyImage() {
@@ -138,24 +154,19 @@ if (galleryImage && galleryCaption && galleryCounter && galleryThumbs.length) {
       galleryImage.src = image.src;
       galleryImage.alt = image.alt;
       galleryCaption.textContent = image.caption;
-      galleryCounter.textContent = `${String(nextIndex + 1).padStart(2, "0")} / ${String(galleryImages.length).padStart(2, "0")}`;
-
+      galleryCounter.textContent = `${String(activeGalleryIndex + 1).padStart(2, "0")} / ${String(images.length).padStart(2, "0")}`;
       galleryThumbs.forEach(function (thumb, thumbIndex) {
-        const isActive = thumbIndex === nextIndex;
+        const isActive = thumbIndex === activeGalleryIndex;
         thumb.classList.toggle("is-active", isActive);
         thumb.setAttribute("aria-pressed", String(isActive));
       });
-
-      requestAnimationFrame(function () {
-        galleryImage.classList.remove("is-fading");
-      });
+      requestAnimationFrame(function () { galleryImage.classList.remove("is-fading"); });
     }
 
-    if (galleryReducedMotion || image.src === galleryImage.getAttribute("src")) {
+    if (galleryReducedMotion || new URL(image.src, document.baseURI).href === galleryImage.src) {
       applyImage();
       return;
     }
-
     const imageLoader = new Image();
     imageLoader.onload = function () {
       if (changeToken !== galleryChangeToken) return;
@@ -166,40 +177,30 @@ if (galleryImage && galleryCaption && galleryCounter && galleryThumbs.length) {
     imageLoader.src = image.src;
   }
 
-  function pauseGalleryAutoplay() {
-    window.clearInterval(galleryAutoplayTimer);
-  }
-
-  function startGalleryAutoplay() {
-    pauseGalleryAutoplay();
+  function pauseAutoplay() { window.clearInterval(galleryAutoplayTimer); }
+  function startAutoplay() {
+    pauseAutoplay();
     if (galleryReducedMotion) return;
-    galleryAutoplayTimer = window.setInterval(function () {
-      showGalleryImage(activeGalleryIndex + 1);
-    }, 1500);
+    galleryAutoplayTimer = window.setInterval(function () { showGalleryImage(activeGalleryIndex + 1); }, 1500);
   }
 
   galleryThumbs.forEach(function (thumb) {
-    thumb.addEventListener("click", function () {
-      showGalleryImage(Number(thumb.dataset.galleryIndex));
-    });
+    thumb.addEventListener("click", function () { showGalleryImage(Number(thumb.dataset.galleryIndex)); });
   });
-
-  galleryPrev?.addEventListener("click", function () {
-    showGalleryImage(activeGalleryIndex - 1);
+  galleryPrev?.addEventListener("click", function () { showGalleryImage(activeGalleryIndex - 1); });
+  galleryNext?.addEventListener("click", function () { showGalleryImage(activeGalleryIndex + 1); });
+  galleryRoot.addEventListener("mouseenter", pauseAutoplay);
+  galleryRoot.addEventListener("mouseleave", startAutoplay);
+  galleryRoot.addEventListener("focusin", pauseAutoplay);
+  galleryRoot.addEventListener("focusout", function (event) {
+    if (!galleryRoot.contains(event.relatedTarget)) startAutoplay();
   });
-
-  galleryNext?.addEventListener("click", function () {
-    showGalleryImage(activeGalleryIndex + 1);
-  });
-
-  galleryRoot?.addEventListener("mouseenter", pauseGalleryAutoplay);
-  galleryRoot?.addEventListener("mouseleave", startGalleryAutoplay);
-  galleryRoot?.addEventListener("focusin", pauseGalleryAutoplay);
-  galleryRoot?.addEventListener("focusout", function (event) {
-    if (!galleryRoot.contains(event.relatedTarget)) startGalleryAutoplay();
-  });
-  startGalleryAutoplay();
+  startAutoplay();
 }
+
+document.querySelectorAll("[data-activity-gallery]").forEach(function (galleryRoot) {
+  initializeActivityGallery(galleryRoot, activityGalleryImages[galleryRoot.dataset.activityGallery]);
+});
 
 
 /* Hitung angka dan level saat ringkasan masuk ke layar */
